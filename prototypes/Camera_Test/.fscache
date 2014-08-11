@@ -1,0 +1,7 @@
+::res://::1407790408
+icon.png::ImageTexture::1407778217::
+test_scene.xscn::PackedScene::1407790358::
+texture.tex::ImageTexture::1407778083::
+tiles.res::MeshLibrary::1407790358::
+tiles.xscn::PackedScene::1407790157::
+walk.gd::GDScript::1407790408::
