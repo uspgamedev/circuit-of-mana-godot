@@ -7,6 +7,9 @@ func _ready():
 var walk_speed = 5
 var turn_speed = 0.8
 var jump_speed = 2
+var jumping = 0
+var jump_max = 0.35
+var is_jump = false
 
 func animate(name):
     var player = get_node("animation_player")
@@ -18,6 +21,7 @@ func animate(name):
         player.play(name)
 
 func _integrate_forces(state):
+    print(jumping)
     var gravity = state.get_total_gravity()
     var delta = state.get_step()
 
@@ -26,10 +30,18 @@ func _integrate_forces(state):
     var left    = Input.is_action_pressed("left")
     var right   = Input.is_action_pressed("right")
     var jump    = Input.is_action_pressed("jump")
+    
+
+    if jumping > 0:
+        jumping -= state.get_step()
+    else: 
+        jumping = 0  
 
     var on_floor = true
+    is_jump = false
     if state.get_contact_count() == 0:
         on_floor = false
+        is_jump = true
 
     if forward or backward or jump:
         set_friction(0)
@@ -45,12 +57,18 @@ func _integrate_forces(state):
 
         if forward:
             velocity += direction * walk_speed
-            animate("walk")
+            if is_jump == false :
+                animate("walk")
         if backward:
             velocity -= direction * walk_speed
-            animate("walk")
+            if is_jump == false:
+                animate("walk")
 
         if jump:
+            if on_floor:
+                jumping = jump_max
+        if jumping > 0:
+            animate("shield")
             velocity -= gravity * delta * jump_speed
 
         # Prevent character from stop falling or jumping.
