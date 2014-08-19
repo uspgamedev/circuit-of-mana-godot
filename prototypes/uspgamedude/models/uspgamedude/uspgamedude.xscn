@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="34" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
-	<ext_resource path="res://models/uspgamedude/classicshoes_texture_diffuse_black.tex" type="Texture"></ext_resource>
-	<ext_resource path="res://models/uspgamedude/teeth.tex" type="Texture"></ext_resource>
 	<ext_resource path="res://models/uspgamedude/uspgamedev_tshirt.tex" type="Texture"></ext_resource>
-	<ext_resource path="res://models/uspgamedude/classicshoes_texture_normals.tex" type="Texture"></ext_resource>
-	<ext_resource path="res://models/uspgamedude/tshirt02_normals.tex" type="Texture"></ext_resource>
-	<ext_resource path="res://models/uspgamedude/eyebrow009.tex" type="Texture"></ext_resource>
-	<ext_resource path="res://models/uspgamedude/tongue01_diffuse.tex" type="Texture"></ext_resource>
 	<ext_resource path="res://models/uspgamedude/jeans01_normals.tex" type="Texture"></ext_resource>
-	<ext_resource path="res://models/uspgamedude/uspgamedude.gd" type="Script"></ext_resource>
+	<ext_resource path="res://models/uspgamedude/classicshoes_texture_normals.tex" type="Texture"></ext_resource>
+	<ext_resource path="res://models/uspgamedude/jeans_basic_diffuse.tex" type="Texture"></ext_resource>
 	<ext_resource path="res://models/uspgamedude/brown_eye.tex" type="Texture"></ext_resource>
 	<ext_resource path="res://models/uspgamedude/young_lightskinned_male_diffuse.tex" type="Texture"></ext_resource>
-	<ext_resource path="res://models/uspgamedude/jeans_basic_diffuse.tex" type="Texture"></ext_resource>
+	<ext_resource path="res://models/uspgamedude/tongue01_diffuse.tex" type="Texture"></ext_resource>
+	<ext_resource path="res://models/uspgamedude/eyebrow009.tex" type="Texture"></ext_resource>
+	<ext_resource path="res://models/uspgamedude/tshirt02_normals.tex" type="Texture"></ext_resource>
+	<ext_resource path="res://models/uspgamedude/teeth.tex" type="Texture"></ext_resource>
+	<ext_resource path="res://models/uspgamedude/classicshoes_texture_diffuse_black.tex" type="Texture"></ext_resource>
+	<ext_resource path="res://models/uspgamedude/uspgamedude.gd" type="Script"></ext_resource>
 	<resource type="CapsuleShape" path="local://1">
 		<real name="radius"> 1 </real>
 		<real name="height"> 1 </real>
@@ -541,6 +541,7 @@
 
 	</resource>
 	<resource type="Animation" path="local://18">
+		<string name="resource/name"> "punch" </string>
 		<real name="length"> 1.833333 </real>
 		<bool name="loop"> False </bool>
 		<real name="step"> 0.1 </real>
@@ -844,7 +845,7 @@
 	</resource>
 	<resource type="Animation" path="local://19">
 		<real name="length"> 1.833333 </real>
-		<bool name="loop"> True </bool>
+		<bool name="loop"> False </bool>
 		<real name="step"> 0.1 </real>
 		<string name="tracks/0/type"> "transform" </string>
 		<node_path name="tracks/0/path"> "body/skeleton:toe.R" </node_path>
@@ -1146,305 +1147,7 @@
 	</resource>
 	<resource type="Animation" path="local://20">
 		<real name="length"> 1.833333 </real>
-		<bool name="loop"> False </bool>
-		<real name="step"> 0.1 </real>
-		<string name="tracks/0/type"> "transform" </string>
-		<node_path name="tracks/0/path"> "body/skeleton:toe.R" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<real_array name="tracks/0/keys" len="12"> 			0, 1, -3.76023e-08, 0, -5.96046e-08, 1.49012e-08, 5.63659e-10, 6.66489e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/1/type"> "transform" </string>
-		<node_path name="tracks/1/path"> "body/skeleton:spine" </node_path>
-		<int name="tracks/1/interp"> 1 </int>
-		<real_array name="tracks/1/keys" len="12"> 			0, 1, -1.66533e-16, 3.0268e-08, -2.98023e-07, -3.27408e-33, 5.55112e-17, 5.20417e-17, 1, 1, 1, 1 </real_array>
-		<string name="tracks/2/type"> "transform" </string>
-		<node_path name="tracks/2/path"> "body/skeleton:spine-1" </node_path>
-		<int name="tracks/2/interp"> 1 </int>
-		<real_array name="tracks/2/keys" len="12"> 			0, 1, 2.84496e-16, -2.6077e-08, 3.39001e-07, -3.85189e-34, 1.38778e-17, -8.32668e-17, 1, 1, 1, 1 </real_array>
-		<string name="tracks/3/type"> "transform" </string>
-		<node_path name="tracks/3/path"> "body/skeleton:chest" </node_path>
-		<int name="tracks/3/interp"> 1 </int>
-		<real_array name="tracks/3/keys" len="12"> 			0, 1, 6.59195e-16, 7.91624e-09, -2.75671e-07, 9.82224e-33, -5.55112e-17, -2.42861e-17, 1, 1, 1, 1 </real_array>
-		<string name="tracks/4/type"> "transform" </string>
-		<node_path name="tracks/4/path"> "body/skeleton:chest-1" </node_path>
-		<int name="tracks/4/interp"> 1 </int>
-		<real_array name="tracks/4/keys" len="12"> 			0, 1, -1.66533e-16, 1.56462e-07, 6.85453e-07, 1.15556e-33, -2.77556e-17, 0, 1, 1, 1, 1 </real_array>
-		<string name="tracks/5/type"> "transform" </string>
-		<node_path name="tracks/5/path"> "body/skeleton:clavicle.R" </node_path>
-		<int name="tracks/5/interp"> 1 </int>
-		<real_array name="tracks/5/keys" len="12"> 			0, 1, 1.49012e-08, 5.06639e-07, -1.86265e-07, -1.49012e-08, -7.45058e-09, 7.45058e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/6/type"> "transform" </string>
-		<node_path name="tracks/6/path"> "body/skeleton:deltoid.R" </node_path>
-		<int name="tracks/6/interp"> 1 </int>
-		<real_array name="tracks/6/keys" len="12"> 			0, 1, 1.19209e-07, 1.49012e-07, 1.19209e-07, 8.88178e-16, -4.47035e-08, 1.49012e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/7/type"> "transform" </string>
-		<node_path name="tracks/7/path"> "body/skeleton:upper_arm.R" </node_path>
-		<int name="tracks/7/interp"> 1 </int>
-		<real_array name="tracks/7/keys" len="12"> 			0, 1, -1.546e-07, -2.04891e-07, -5.06639e-07, 1.49012e-08, -2.23517e-08, -2.23517e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/8/type"> "transform" </string>
-		<node_path name="tracks/8/path"> "body/skeleton:forearm.R" </node_path>
-		<int name="tracks/8/interp"> 1 </int>
-		<real_array name="tracks/8/keys" len="12"> 			0, 1, 5.36674e-07, 5.96046e-07, 4.17233e-07, -2.48143e-15, -1.76392e-08, 4.56216e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/9/type"> "transform" </string>
-		<node_path name="tracks/9/path"> "body/skeleton:hand.R" </node_path>
-		<int name="tracks/9/interp"> 1 </int>
-		<real_array name="tracks/9/keys" len="12"> 			0, 1, 1.65775e-07, 1.04308e-07, -5.96046e-08, -1.49012e-08, -2.04891e-08, -1.02445e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/10/type"> "transform" </string>
-		<node_path name="tracks/10/path"> "body/skeleton:hips" </node_path>
-		<int name="tracks/10/interp"> 1 </int>
-		<real_array name="tracks/10/keys" len="12"> 			0, 1, -1.38778e-17, 0, 0, 1.20371e-35, -3.46945e-18, -3.46945e-18, 1, 1, 1, 1 </real_array>
-		<string name="tracks/11/type"> "transform" </string>
-		<node_path name="tracks/11/path"> "body/skeleton:palm_pinky.R" </node_path>
-		<int name="tracks/11/interp"> 1 </int>
-		<real_array name="tracks/11/keys" len="12"> 			0, 1, 2.08616e-07, -2.30037e-07, 4.47035e-08, -8.88179e-16, -1.49012e-08, 3.72529e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/12/type"> "transform" </string>
-		<node_path name="tracks/12/path"> "body/skeleton:f_pinky.01.R" </node_path>
-		<int name="tracks/12/interp"> 1 </int>
-		<real_array name="tracks/12/keys" len="12"> 			0, 1, -2.68188e-07, 1.9744e-07, -1.93715e-07, -1.49012e-08, 2.31375e-08, -2.39597e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/13/type"> "transform" </string>
-		<node_path name="tracks/13/path"> "body/skeleton:f_pinky.02.R" </node_path>
-		<int name="tracks/13/interp"> 1 </int>
-		<real_array name="tracks/13/keys" len="12"> 			0, 1, 2.44763e-07, -3.37139e-07, 2.64496e-07, 2.01011e-16, -1.67638e-08, 1.04774e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/14/type"> "transform" </string>
-		<node_path name="tracks/14/path"> "body/skeleton:f_pinky.03.R" </node_path>
-		<int name="tracks/14/interp"> 1 </int>
-		<real_array name="tracks/14/keys" len="12"> 			0, 1, -1.43889e-07, 2.53611e-07, -7.07805e-08, 8.3819e-09, 1.49012e-08, 1.09139e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/15/type"> "transform" </string>
-		<node_path name="tracks/15/path"> "body/skeleton:palm_middle.R" </node_path>
-		<int name="tracks/15/interp"> 1 </int>
-		<real_array name="tracks/15/keys" len="12"> 			0, 1, -1.78814e-07, 9.77889e-09, -8.9407e-08, 2.23517e-08, -1.72877e-08, 2.43599e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/16/type"> "transform" </string>
-		<node_path name="tracks/16/path"> "body/skeleton:f_middle.01.R" </node_path>
-		<int name="tracks/16/interp"> 1 </int>
-		<real_array name="tracks/16/keys" len="12"> 			0, 1, 4.5076e-07, -2.99886e-07, 8.9407e-08, -7.45058e-09, 2.23517e-08, 2.04891e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/17/type"> "transform" </string>
-		<node_path name="tracks/17/path"> "body/skeleton:f_middle.02.R" </node_path>
-		<int name="tracks/17/interp"> 1 </int>
-		<real_array name="tracks/17/keys" len="12"> 			0, 1, -1.52853e-07, 3.18512e-07, -1.86265e-07, 7.45058e-09, 5.12228e-09, -7.68341e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/18/type"> "transform" </string>
-		<node_path name="tracks/18/path"> "body/skeleton:f_middle.03.R" </node_path>
-		<int name="tracks/18/interp"> 1 </int>
-		<real_array name="tracks/18/keys" len="12"> 			0, 1, 8.21892e-08, -5.52682e-07, 8.56817e-08, 6.98492e-10, -2.79397e-09, 6.99219e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/19/type"> "transform" </string>
-		<node_path name="tracks/19/path"> "body/skeleton:palm_ring.R" </node_path>
-		<int name="tracks/19/interp"> 1 </int>
-		<real_array name="tracks/19/keys" len="12"> 			0, 1, 2.32831e-07, -3.13856e-07, -1.2666e-07, -1.14145e-15, -1.11759e-08, -4.09782e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/20/type"> "transform" </string>
-		<node_path name="tracks/20/path"> "body/skeleton:f_ring.01.R" </node_path>
-		<int name="tracks/20/interp"> 1 </int>
-		<real_array name="tracks/20/keys" len="12"> 			0, 1, -1.08033e-07, 3.35276e-08, 5.96046e-08, 1.49012e-08, 7.494e-16, 2.51457e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/21/type"> "transform" </string>
-		<node_path name="tracks/21/path"> "body/skeleton:thigh.L" </node_path>
-		<int name="tracks/21/interp"> 1 </int>
-		<real_array name="tracks/21/keys" len="12"> 			0, 1, -2.98023e-08, 7.45058e-09, -2.27243e-07, -7.45058e-09, -1.86265e-09, -1.42027e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/22/type"> "transform" </string>
-		<node_path name="tracks/22/path"> "body/skeleton:f_ring.02.R" </node_path>
-		<int name="tracks/22/interp"> 1 </int>
-		<real_array name="tracks/22/keys" len="12"> 			0, 1, -4.08501e-07, 7.23638e-07, -6.4075e-07, 5.21541e-08, 1.39698e-08, -2.53785e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/23/type"> "transform" </string>
-		<node_path name="tracks/23/path"> "body/skeleton:f_ring.03.R" </node_path>
-		<int name="tracks/23/interp"> 1 </int>
-		<real_array name="tracks/23/keys" len="12"> 			0, 1, 2.91737e-07, -3.76313e-07, 5.58794e-08, -9.31323e-09, 3.91155e-08, 4.80213e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/24/type"> "transform" </string>
-		<node_path name="tracks/24/path"> "body/skeleton:thumb.01.R" </node_path>
-		<int name="tracks/24/interp"> 1 </int>
-		<real_array name="tracks/24/keys" len="12"> 			0, 1, 7.45058e-09, 5.27129e-07, -3.12924e-07, -2.23517e-08, -3.33067e-16, 1.49012e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/25/type"> "transform" </string>
-		<node_path name="tracks/25/path"> "body/skeleton:thumb.02.R" </node_path>
-		<int name="tracks/25/interp"> 1 </int>
-		<real_array name="tracks/25/keys" len="12"> 			0, 1, -5.96046e-08, -5.41098e-07, -8.19564e-08, 2.23517e-08, -2.98023e-08, -1.86264e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/26/type"> "transform" </string>
-		<node_path name="tracks/26/path"> "body/skeleton:thumb.03.R" </node_path>
-		<int name="tracks/26/interp"> 1 </int>
-		<real_array name="tracks/26/keys" len="12"> 			0, 1, -8.14907e-10, 2.70084e-08, -2.98023e-08, 2.6077e-08, 6.75209e-09, -7.87259e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/27/type"> "transform" </string>
-		<node_path name="tracks/27/path"> "body/skeleton:palm_index.R" </node_path>
-		<int name="tracks/27/interp"> 1 </int>
-		<real_array name="tracks/27/keys" len="12"> 			0, 1, 7.91624e-08, -5.21541e-08, -1.49012e-07, 1.49012e-08, -3.72529e-08, 1.39698e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/28/type"> "transform" </string>
-		<node_path name="tracks/28/path"> "body/skeleton:f_index.01.R" </node_path>
-		<int name="tracks/28/interp"> 1 </int>
-		<real_array name="tracks/28/keys" len="12"> 			0, 1, 5.58794e-09, 2.68221e-07, -1.49012e-07, 3.72529e-08, 2.23517e-08, 3.09665e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/29/type"> "transform" </string>
-		<node_path name="tracks/29/path"> "body/skeleton:f_index.02.R" </node_path>
-		<int name="tracks/29/interp"> 1 </int>
-		<real_array name="tracks/29/keys" len="12"> 			0, 1, 1.76224e-07, -3.25032e-07, 5.58794e-08, -2.59352e-15, 1.95578e-08, -3.50701e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/30/type"> "transform" </string>
-		<node_path name="tracks/30/path"> "body/skeleton:f_index.03.R" </node_path>
-		<int name="tracks/30/interp"> 1 </int>
-		<real_array name="tracks/30/keys" len="12"> 			0, 1, 2.05968e-07, 2.76952e-07, 1.71363e-07, -4.65661e-08, -3.79514e-08, -4.70027e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/31/type"> "transform" </string>
-		<node_path name="tracks/31/path"> "body/skeleton:clavicle.L" </node_path>
-		<int name="tracks/31/interp"> 1 </int>
-		<real_array name="tracks/31/keys" len="12"> 			0, 1, -1.49012e-08, 5.06639e-07, -1.86265e-07, -1.49012e-08, 7.45058e-09, -7.45058e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/32/type"> "transform" </string>
-		<node_path name="tracks/32/path"> "body/skeleton:shin.L" </node_path>
-		<int name="tracks/32/interp"> 1 </int>
-		<real_array name="tracks/32/keys" len="12"> 			0, 1, 2.04891e-08, 2.98023e-08, 0, -9.51178e-18, -1.18405e-10, -1.15806e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/33/type"> "transform" </string>
-		<node_path name="tracks/33/path"> "body/skeleton:deltoid.L" </node_path>
-		<int name="tracks/33/interp"> 1 </int>
-		<real_array name="tracks/33/keys" len="12"> 			0, 1, -1.19209e-07, 1.49012e-07, 1.19209e-07, 8.88178e-16, 4.47035e-08, -1.49012e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/34/type"> "transform" </string>
-		<node_path name="tracks/34/path"> "body/skeleton:upper_arm.L" </node_path>
-		<int name="tracks/34/interp"> 1 </int>
-		<real_array name="tracks/34/keys" len="12"> 			0, 1, 1.546e-07, -2.04891e-07, -5.06639e-07, 1.49012e-08, 2.23517e-08, 2.23517e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/35/type"> "transform" </string>
-		<node_path name="tracks/35/path"> "body/skeleton:forearm.L" </node_path>
-		<int name="tracks/35/interp"> 1 </int>
-		<real_array name="tracks/35/keys" len="12"> 			0, 1, -5.36674e-07, 5.96046e-07, 4.17233e-07, -2.48143e-15, 1.76392e-08, -4.56216e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/36/type"> "transform" </string>
-		<node_path name="tracks/36/path"> "body/skeleton:hand.L" </node_path>
-		<int name="tracks/36/interp"> 1 </int>
-		<real_array name="tracks/36/keys" len="12"> 			0, 1, -1.65775e-07, 1.04308e-07, -5.96046e-08, -1.49012e-08, 2.04891e-08, 1.02445e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/37/type"> "transform" </string>
-		<node_path name="tracks/37/path"> "body/skeleton:palm_pinky.L" </node_path>
-		<int name="tracks/37/interp"> 1 </int>
-		<real_array name="tracks/37/keys" len="12"> 			0, 1, -3.72529e-08, -2.78465e-07, -5.21541e-08, 3.72529e-09, 4.47035e-08, -3.53903e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/38/type"> "transform" </string>
-		<node_path name="tracks/38/path"> "body/skeleton:f_pinky.01.L" </node_path>
-		<int name="tracks/38/interp"> 1 </int>
-		<real_array name="tracks/38/keys" len="12"> 			0, 1, 2.18861e-08, 5.21541e-08, -5.1409e-07, -2.98023e-08, -2.23517e-08, 3.58559e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/39/type"> "transform" </string>
-		<node_path name="tracks/39/path"> "body/skeleton:f_pinky.02.L" </node_path>
-		<int name="tracks/39/interp"> 1 </int>
-		<real_array name="tracks/39/keys" len="12"> 			0, 1, -1.22876e-07, -3.82774e-07, 5.21541e-08, 4.47035e-08, 3.72529e-09, 1.31549e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/40/type"> "transform" </string>
-		<node_path name="tracks/40/path"> "body/skeleton:f_pinky.03.L" </node_path>
-		<int name="tracks/40/interp"> 1 </int>
-		<real_array name="tracks/40/keys" len="12"> 			0, 1, 2.33413e-08, 4.01749e-07, -4.09782e-08, -3.81842e-08, 1.02445e-08, -3.87081e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/41/type"> "transform" </string>
-		<node_path name="tracks/41/path"> "body/skeleton:palm_index.L" </node_path>
-		<int name="tracks/41/interp"> 1 </int>
-		<real_array name="tracks/41/keys" len="12"> 			0, 1, -7.91624e-08, -5.21541e-08, -1.49012e-07, 1.49012e-08, 3.72529e-08, -1.39698e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/42/type"> "transform" </string>
-		<node_path name="tracks/42/path"> "body/skeleton:f_index.01.L" </node_path>
-		<int name="tracks/42/interp"> 1 </int>
-		<real_array name="tracks/42/keys" len="12"> 			0, 1, -5.58794e-09, 2.68221e-07, -1.49012e-07, 3.72529e-08, -2.23517e-08, -3.09665e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/43/type"> "transform" </string>
-		<node_path name="tracks/43/path"> "body/skeleton:foot.L" </node_path>
-		<int name="tracks/43/interp"> 1 </int>
-		<real_array name="tracks/43/keys" len="12"> 			0, 1, 1.49012e-08, -1.78814e-07, 1.19209e-07, -1.66533e-16, 1.11759e-08, 1.86264e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/44/type"> "transform" </string>
-		<node_path name="tracks/44/path"> "body/skeleton:f_index.02.L" </node_path>
-		<int name="tracks/44/interp"> 1 </int>
-		<real_array name="tracks/44/keys" len="12"> 			0, 1, -1.76224e-07, -3.25032e-07, 5.58794e-08, -2.59352e-15, -1.95578e-08, 3.50701e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/45/type"> "transform" </string>
-		<node_path name="tracks/45/path"> "body/skeleton:f_index.03.L" </node_path>
-		<int name="tracks/45/interp"> 1 </int>
-		<real_array name="tracks/45/keys" len="12"> 			0, 1, -2.05968e-07, 2.76952e-07, 1.71363e-07, -4.65661e-08, 3.79514e-08, 4.70027e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/46/type"> "transform" </string>
-		<node_path name="tracks/46/path"> "body/skeleton:palm_ring.L" </node_path>
-		<int name="tracks/46/interp"> 1 </int>
-		<real_array name="tracks/46/keys" len="12"> 			0, 1, -1.76951e-07, -3.77186e-08, 2.30968e-07, 1.49012e-08, 7.45058e-09, 9.31323e-10, 1, 1, 1, 1 </real_array>
-		<string name="tracks/47/type"> "transform" </string>
-		<node_path name="tracks/47/path"> "body/skeleton:f_ring.01.L" </node_path>
-		<int name="tracks/47/interp"> 1 </int>
-		<real_array name="tracks/47/keys" len="12"> 			0, 1, 1.84402e-07, -1.58325e-08, -1.3411e-07, -2.23517e-08, 1.49012e-08, -8.3819e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/48/type"> "transform" </string>
-		<node_path name="tracks/48/path"> "body/skeleton:f_ring.02.L" </node_path>
-		<int name="tracks/48/interp"> 1 </int>
-		<real_array name="tracks/48/keys" len="12"> 			0, 1, 6.47269e-08, 2.14204e-08, -1.86265e-07, 1.73473e-18, -3.72529e-09, -8.3819e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/49/type"> "transform" </string>
-		<node_path name="tracks/49/path"> "body/skeleton:f_ring.03.L" </node_path>
-		<int name="tracks/49/interp"> 1 </int>
-		<real_array name="tracks/49/keys" len="12"> 			0, 1, -9.49949e-08, 3.80678e-08, -9.68575e-08, 1.02445e-08, -1.11759e-08, -7.47968e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/50/type"> "transform" </string>
-		<node_path name="tracks/50/path"> "body/skeleton:palm_middle.L" </node_path>
-		<int name="tracks/50/interp"> 1 </int>
-		<real_array name="tracks/50/keys" len="12"> 			0, 1, 1.78814e-07, 9.77889e-09, -8.9407e-08, 2.23517e-08, 1.72877e-08, -2.43599e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/51/type"> "transform" </string>
-		<node_path name="tracks/51/path"> "body/skeleton:f_middle.01.L" </node_path>
-		<int name="tracks/51/interp"> 1 </int>
-		<real_array name="tracks/51/keys" len="12"> 			0, 1, -4.5076e-07, -2.99886e-07, 8.9407e-08, -7.45058e-09, -2.23517e-08, -2.04891e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/52/type"> "transform" </string>
-		<node_path name="tracks/52/path"> "body/skeleton:f_middle.02.L" </node_path>
-		<int name="tracks/52/interp"> 1 </int>
-		<real_array name="tracks/52/keys" len="12"> 			0, 1, 1.52853e-07, 3.18512e-07, -1.86265e-07, 7.45058e-09, -5.12228e-09, 7.68341e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/53/type"> "transform" </string>
-		<node_path name="tracks/53/path"> "body/skeleton:f_middle.03.L" </node_path>
-		<int name="tracks/53/interp"> 1 </int>
-		<real_array name="tracks/53/keys" len="12"> 			0, 1, -8.21892e-08, -5.52682e-07, 8.56817e-08, 6.98492e-10, 2.79397e-09, -6.99219e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/54/type"> "transform" </string>
-		<node_path name="tracks/54/path"> "body/skeleton:toe.L" </node_path>
-		<int name="tracks/54/interp"> 1 </int>
-		<real_array name="tracks/54/keys" len="12"> 			0, 1, 3.76023e-08, 0, -5.96046e-08, 1.49012e-08, -5.63659e-10, -6.66489e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/55/type"> "transform" </string>
-		<node_path name="tracks/55/path"> "body/skeleton:thumb.01.L" </node_path>
-		<int name="tracks/55/interp"> 1 </int>
-		<real_array name="tracks/55/keys" len="12"> 			0, 1, 1.3411e-07, 5.45755e-07, -8.19564e-08, 3.10862e-15, 2.98023e-08, 2.23517e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/56/type"> "transform" </string>
-		<node_path name="tracks/56/path"> "body/skeleton:thumb.02.L" </node_path>
-		<int name="tracks/56/interp"> 1 </int>
-		<real_array name="tracks/56/keys" len="12"> 			0, 1, 4.09782e-08, -5.15953e-07, 5.96046e-08, 3.72529e-09, 3.46945e-17, 9.31322e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/57/type"> "transform" </string>
-		<node_path name="tracks/57/path"> "body/skeleton:thumb.03.L" </node_path>
-		<int name="tracks/57/interp"> 1 </int>
-		<real_array name="tracks/57/keys" len="12"> 			0, 1, -1.16415e-07, 9.96515e-08, -9.68575e-08, 4.47035e-08, 2.02563e-08, 2.03872e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/58/type"> "transform" </string>
-		<node_path name="tracks/58/path"> "body/skeleton:neck" </node_path>
-		<int name="tracks/58/interp"> 1 </int>
-		<real_array name="tracks/58/keys" len="12"> 			0, 1, -6.93889e-17, -2.98023e-08, -2.38419e-07, 9.62965e-35, -1.38778e-17, -6.93889e-18, 1, 1, 1, 1 </real_array>
-		<string name="tracks/59/type"> "transform" </string>
-		<node_path name="tracks/59/path"> "body/skeleton:head" </node_path>
-		<int name="tracks/59/interp"> 1 </int>
-		<real_array name="tracks/59/keys" len="12"> 			0, 1, -1.38778e-17, 1.86265e-08, 1.49012e-08, 0, 0, 3.46945e-18, 1, 1, 1, 1 </real_array>
-		<string name="tracks/60/type"> "transform" </string>
-		<node_path name="tracks/60/path"> "body/skeleton:jaw" </node_path>
-		<int name="tracks/60/interp"> 1 </int>
-		<real_array name="tracks/60/keys" len="12"> 			0, 1, -6.78711e-17, -1.11759e-07, -1.49012e-07, 1.49012e-08, 0, 0, 1, 1, 1, 1 </real_array>
-		<string name="tracks/61/type"> "transform" </string>
-		<node_path name="tracks/61/path"> "body/skeleton:tongue_base" </node_path>
-		<int name="tracks/61/interp"> 1 </int>
-		<real_array name="tracks/61/keys" len="12"> 			0, 1, -2.31611e-23, -2.68221e-07, -2.04891e-08, 1.49012e-08, -6.61744e-24, -1.98523e-23, 1, 1, 1, 1 </real_array>
-		<string name="tracks/62/type"> "transform" </string>
-		<node_path name="tracks/62/path"> "body/skeleton:tongue_mid" </node_path>
-		<int name="tracks/62/interp"> 1 </int>
-		<real_array name="tracks/62/keys" len="12"> 			0, 1, 6.10046e-24, 6.98492e-07, -5.21541e-08, 0, -1.32349e-23, 8.5303e-25, 1, 1, 1, 1 </real_array>
-		<string name="tracks/63/type"> "transform" </string>
-		<node_path name="tracks/63/path"> "body/skeleton:tongue_tip" </node_path>
-		<int name="tracks/63/interp"> 1 </int>
-		<real_array name="tracks/63/keys" len="12"> 			0, 1, -8.80947e-23, -6.61239e-07, 2.79397e-07, 1.49012e-08, 1.32349e-23, 2.39882e-23, 1, 1, 1, 1 </real_array>
-		<string name="tracks/64/type"> "transform" </string>
-		<node_path name="tracks/64/path"> "body/skeleton:uplid.L" </node_path>
-		<int name="tracks/64/interp"> 1 </int>
-		<real_array name="tracks/64/keys" len="12"> 			0, 1, 0, -3.31551e-07, -2.98023e-08, -2.40741e-35, -1.73472e-18, -1.38778e-17, 1, 1, 1, 1 </real_array>
-		<string name="tracks/65/type"> "transform" </string>
-		<node_path name="tracks/65/path"> "body/skeleton:thigh.R" </node_path>
-		<int name="tracks/65/interp"> 1 </int>
-		<real_array name="tracks/65/keys" len="12"> 			0, 1, 2.98023e-08, 7.45058e-09, -2.27243e-07, 2.86229e-17, 1.86265e-09, 1.42027e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/66/type"> "transform" </string>
-		<node_path name="tracks/66/path"> "body/skeleton:eye.R" </node_path>
-		<int name="tracks/66/interp"> 1 </int>
-		<real_array name="tracks/66/keys" len="12"> 			0, 1, -2.90573e-07, -1.58325e-07, 7.45058e-08, -9.31323e-10, 1.86265e-09, 2.98023e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/67/type"> "transform" </string>
-		<node_path name="tracks/67/path"> "body/skeleton:eye.L" </node_path>
-		<int name="tracks/67/interp"> 1 </int>
-		<real_array name="tracks/67/keys" len="12"> 			0, 1, 2.90573e-07, -1.58325e-07, 7.45058e-08, -1.02446e-08, -1.86264e-09, -2.98023e-08, 1, 1, 1, 1 </real_array>
-		<string name="tracks/68/type"> "transform" </string>
-		<node_path name="tracks/68/path"> "body/skeleton:lolid.L" </node_path>
-		<int name="tracks/68/interp"> 1 </int>
-		<real_array name="tracks/68/keys" len="12"> 			0, 1, 0, -3.42727e-07, 5.96046e-08, 1.49012e-08, -2.77556e-17, 4.1359e-25, 1, 1, 1, 1 </real_array>
-		<string name="tracks/69/type"> "transform" </string>
-		<node_path name="tracks/69/path"> "body/skeleton:uplid.R" </node_path>
-		<int name="tracks/69/interp"> 1 </int>
-		<real_array name="tracks/69/keys" len="12"> 			0, 1, 0, -3.31551e-07, -2.98023e-08, 7.45058e-09, -6.93889e-18, 0, 1, 1, 1, 1 </real_array>
-		<string name="tracks/70/type"> "transform" </string>
-		<node_path name="tracks/70/path"> "body/skeleton:lolid.R" </node_path>
-		<int name="tracks/70/interp"> 1 </int>
-		<real_array name="tracks/70/keys" len="12"> 			0, 1, 0, -3.42727e-07, 5.96046e-08, 1.49012e-08, -2.77556e-17, 4.1359e-25, 1, 1, 1, 1 </real_array>
-		<string name="tracks/71/type"> "transform" </string>
-		<node_path name="tracks/71/path"> "body/skeleton:shin.R" </node_path>
-		<int name="tracks/71/interp"> 1 </int>
-		<real_array name="tracks/71/keys" len="12"> 			0, 1, -2.04891e-08, 2.98023e-08, 0, -9.51178e-18, 1.18405e-10, 1.15806e-09, 1, 1, 1, 1 </real_array>
-		<string name="tracks/72/type"> "transform" </string>
-		<node_path name="tracks/72/path"> "body/skeleton:foot.R" </node_path>
-		<int name="tracks/72/interp"> 1 </int>
-		<real_array name="tracks/72/keys" len="12"> 			0, 1, -1.49012e-08, -1.78814e-07, 1.19209e-07, -1.66533e-16, -1.11759e-08, -1.86264e-09, 1, 1, 1, 1 </real_array>
-
-	</resource>
-	<resource type="Animation" path="local://21">
-		<real name="length"> 1.833333 </real>
-		<bool name="loop"> False </bool>
+		<bool name="loop"> True </bool>
 		<real name="step"> 0.1 </real>
 		<string name="tracks/0/type"> "transform" </string>
 		<node_path name="tracks/0/path"> "body/skeleton:toe.R" </node_path>
@@ -1744,10 +1447,308 @@
 		<real_array name="tracks/73/keys" len="24"> 			0, 1, 0, 0.0511922, 0, 0, 0, 0, 1, 1, 1, 1, 1.8, 1, 0, 0.0511922, 0, 0, 0, 0, 1, 1, 1, 1 </real_array>
 
 	</resource>
+	<resource type="Animation" path="local://21">
+		<real name="length"> 1.833333 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "transform" </string>
+		<node_path name="tracks/0/path"> "body/skeleton:toe.R" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<real_array name="tracks/0/keys" len="12"> 			0, 1, -3.76023e-08, 0, -5.96046e-08, 1.49012e-08, 5.63659e-10, 6.66489e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/1/type"> "transform" </string>
+		<node_path name="tracks/1/path"> "body/skeleton:spine" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<real_array name="tracks/1/keys" len="12"> 			0, 1, -1.66533e-16, 3.0268e-08, -2.98023e-07, -3.27408e-33, 5.55112e-17, 5.20417e-17, 1, 1, 1, 1 </real_array>
+		<string name="tracks/2/type"> "transform" </string>
+		<node_path name="tracks/2/path"> "body/skeleton:spine-1" </node_path>
+		<int name="tracks/2/interp"> 1 </int>
+		<real_array name="tracks/2/keys" len="12"> 			0, 1, 2.84496e-16, -2.6077e-08, 3.39001e-07, -3.85189e-34, 1.38778e-17, -8.32668e-17, 1, 1, 1, 1 </real_array>
+		<string name="tracks/3/type"> "transform" </string>
+		<node_path name="tracks/3/path"> "body/skeleton:chest" </node_path>
+		<int name="tracks/3/interp"> 1 </int>
+		<real_array name="tracks/3/keys" len="12"> 			0, 1, 6.59195e-16, 7.91624e-09, -2.75671e-07, 9.82224e-33, -5.55112e-17, -2.42861e-17, 1, 1, 1, 1 </real_array>
+		<string name="tracks/4/type"> "transform" </string>
+		<node_path name="tracks/4/path"> "body/skeleton:chest-1" </node_path>
+		<int name="tracks/4/interp"> 1 </int>
+		<real_array name="tracks/4/keys" len="12"> 			0, 1, -1.66533e-16, 1.56462e-07, 6.85453e-07, 1.15556e-33, -2.77556e-17, 0, 1, 1, 1, 1 </real_array>
+		<string name="tracks/5/type"> "transform" </string>
+		<node_path name="tracks/5/path"> "body/skeleton:clavicle.R" </node_path>
+		<int name="tracks/5/interp"> 1 </int>
+		<real_array name="tracks/5/keys" len="12"> 			0, 1, 1.49012e-08, 5.06639e-07, -1.86265e-07, -1.49012e-08, -7.45058e-09, 7.45058e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/6/type"> "transform" </string>
+		<node_path name="tracks/6/path"> "body/skeleton:deltoid.R" </node_path>
+		<int name="tracks/6/interp"> 1 </int>
+		<real_array name="tracks/6/keys" len="12"> 			0, 1, 1.19209e-07, 1.49012e-07, 1.19209e-07, 8.88178e-16, -4.47035e-08, 1.49012e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/7/type"> "transform" </string>
+		<node_path name="tracks/7/path"> "body/skeleton:upper_arm.R" </node_path>
+		<int name="tracks/7/interp"> 1 </int>
+		<real_array name="tracks/7/keys" len="12"> 			0, 1, -1.546e-07, -2.04891e-07, -5.06639e-07, 1.49012e-08, -2.23517e-08, -2.23517e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/8/type"> "transform" </string>
+		<node_path name="tracks/8/path"> "body/skeleton:forearm.R" </node_path>
+		<int name="tracks/8/interp"> 1 </int>
+		<real_array name="tracks/8/keys" len="12"> 			0, 1, 5.36674e-07, 5.96046e-07, 4.17233e-07, -2.48143e-15, -1.76392e-08, 4.56216e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/9/type"> "transform" </string>
+		<node_path name="tracks/9/path"> "body/skeleton:hand.R" </node_path>
+		<int name="tracks/9/interp"> 1 </int>
+		<real_array name="tracks/9/keys" len="12"> 			0, 1, 1.65775e-07, 1.04308e-07, -5.96046e-08, -1.49012e-08, -2.04891e-08, -1.02445e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/10/type"> "transform" </string>
+		<node_path name="tracks/10/path"> "body/skeleton:hips" </node_path>
+		<int name="tracks/10/interp"> 1 </int>
+		<real_array name="tracks/10/keys" len="12"> 			0, 1, -1.38778e-17, 0, 0, 1.20371e-35, -3.46945e-18, -3.46945e-18, 1, 1, 1, 1 </real_array>
+		<string name="tracks/11/type"> "transform" </string>
+		<node_path name="tracks/11/path"> "body/skeleton:palm_pinky.R" </node_path>
+		<int name="tracks/11/interp"> 1 </int>
+		<real_array name="tracks/11/keys" len="12"> 			0, 1, 2.08616e-07, -2.30037e-07, 4.47035e-08, -8.88179e-16, -1.49012e-08, 3.72529e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/12/type"> "transform" </string>
+		<node_path name="tracks/12/path"> "body/skeleton:f_pinky.01.R" </node_path>
+		<int name="tracks/12/interp"> 1 </int>
+		<real_array name="tracks/12/keys" len="12"> 			0, 1, -2.68188e-07, 1.9744e-07, -1.93715e-07, -1.49012e-08, 2.31375e-08, -2.39597e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/13/type"> "transform" </string>
+		<node_path name="tracks/13/path"> "body/skeleton:f_pinky.02.R" </node_path>
+		<int name="tracks/13/interp"> 1 </int>
+		<real_array name="tracks/13/keys" len="12"> 			0, 1, 2.44763e-07, -3.37139e-07, 2.64496e-07, 2.01011e-16, -1.67638e-08, 1.04774e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/14/type"> "transform" </string>
+		<node_path name="tracks/14/path"> "body/skeleton:f_pinky.03.R" </node_path>
+		<int name="tracks/14/interp"> 1 </int>
+		<real_array name="tracks/14/keys" len="12"> 			0, 1, -1.43889e-07, 2.53611e-07, -7.07805e-08, 8.3819e-09, 1.49012e-08, 1.09139e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/15/type"> "transform" </string>
+		<node_path name="tracks/15/path"> "body/skeleton:palm_middle.R" </node_path>
+		<int name="tracks/15/interp"> 1 </int>
+		<real_array name="tracks/15/keys" len="12"> 			0, 1, -1.78814e-07, 9.77889e-09, -8.9407e-08, 2.23517e-08, -1.72877e-08, 2.43599e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/16/type"> "transform" </string>
+		<node_path name="tracks/16/path"> "body/skeleton:f_middle.01.R" </node_path>
+		<int name="tracks/16/interp"> 1 </int>
+		<real_array name="tracks/16/keys" len="12"> 			0, 1, 4.5076e-07, -2.99886e-07, 8.9407e-08, -7.45058e-09, 2.23517e-08, 2.04891e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/17/type"> "transform" </string>
+		<node_path name="tracks/17/path"> "body/skeleton:f_middle.02.R" </node_path>
+		<int name="tracks/17/interp"> 1 </int>
+		<real_array name="tracks/17/keys" len="12"> 			0, 1, -1.52853e-07, 3.18512e-07, -1.86265e-07, 7.45058e-09, 5.12228e-09, -7.68341e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/18/type"> "transform" </string>
+		<node_path name="tracks/18/path"> "body/skeleton:f_middle.03.R" </node_path>
+		<int name="tracks/18/interp"> 1 </int>
+		<real_array name="tracks/18/keys" len="12"> 			0, 1, 8.21892e-08, -5.52682e-07, 8.56817e-08, 6.98492e-10, -2.79397e-09, 6.99219e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/19/type"> "transform" </string>
+		<node_path name="tracks/19/path"> "body/skeleton:palm_ring.R" </node_path>
+		<int name="tracks/19/interp"> 1 </int>
+		<real_array name="tracks/19/keys" len="12"> 			0, 1, 2.32831e-07, -3.13856e-07, -1.2666e-07, -1.14145e-15, -1.11759e-08, -4.09782e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/20/type"> "transform" </string>
+		<node_path name="tracks/20/path"> "body/skeleton:f_ring.01.R" </node_path>
+		<int name="tracks/20/interp"> 1 </int>
+		<real_array name="tracks/20/keys" len="12"> 			0, 1, -1.08033e-07, 3.35276e-08, 5.96046e-08, 1.49012e-08, 7.494e-16, 2.51457e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/21/type"> "transform" </string>
+		<node_path name="tracks/21/path"> "body/skeleton:thigh.L" </node_path>
+		<int name="tracks/21/interp"> 1 </int>
+		<real_array name="tracks/21/keys" len="12"> 			0, 1, -2.98023e-08, 7.45058e-09, -2.27243e-07, -7.45058e-09, -1.86265e-09, -1.42027e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/22/type"> "transform" </string>
+		<node_path name="tracks/22/path"> "body/skeleton:f_ring.02.R" </node_path>
+		<int name="tracks/22/interp"> 1 </int>
+		<real_array name="tracks/22/keys" len="12"> 			0, 1, -4.08501e-07, 7.23638e-07, -6.4075e-07, 5.21541e-08, 1.39698e-08, -2.53785e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/23/type"> "transform" </string>
+		<node_path name="tracks/23/path"> "body/skeleton:f_ring.03.R" </node_path>
+		<int name="tracks/23/interp"> 1 </int>
+		<real_array name="tracks/23/keys" len="12"> 			0, 1, 2.91737e-07, -3.76313e-07, 5.58794e-08, -9.31323e-09, 3.91155e-08, 4.80213e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/24/type"> "transform" </string>
+		<node_path name="tracks/24/path"> "body/skeleton:thumb.01.R" </node_path>
+		<int name="tracks/24/interp"> 1 </int>
+		<real_array name="tracks/24/keys" len="12"> 			0, 1, 7.45058e-09, 5.27129e-07, -3.12924e-07, -2.23517e-08, -3.33067e-16, 1.49012e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/25/type"> "transform" </string>
+		<node_path name="tracks/25/path"> "body/skeleton:thumb.02.R" </node_path>
+		<int name="tracks/25/interp"> 1 </int>
+		<real_array name="tracks/25/keys" len="12"> 			0, 1, -5.96046e-08, -5.41098e-07, -8.19564e-08, 2.23517e-08, -2.98023e-08, -1.86264e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/26/type"> "transform" </string>
+		<node_path name="tracks/26/path"> "body/skeleton:thumb.03.R" </node_path>
+		<int name="tracks/26/interp"> 1 </int>
+		<real_array name="tracks/26/keys" len="12"> 			0, 1, -8.14907e-10, 2.70084e-08, -2.98023e-08, 2.6077e-08, 6.75209e-09, -7.87259e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/27/type"> "transform" </string>
+		<node_path name="tracks/27/path"> "body/skeleton:palm_index.R" </node_path>
+		<int name="tracks/27/interp"> 1 </int>
+		<real_array name="tracks/27/keys" len="12"> 			0, 1, 7.91624e-08, -5.21541e-08, -1.49012e-07, 1.49012e-08, -3.72529e-08, 1.39698e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/28/type"> "transform" </string>
+		<node_path name="tracks/28/path"> "body/skeleton:f_index.01.R" </node_path>
+		<int name="tracks/28/interp"> 1 </int>
+		<real_array name="tracks/28/keys" len="12"> 			0, 1, 5.58794e-09, 2.68221e-07, -1.49012e-07, 3.72529e-08, 2.23517e-08, 3.09665e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/29/type"> "transform" </string>
+		<node_path name="tracks/29/path"> "body/skeleton:f_index.02.R" </node_path>
+		<int name="tracks/29/interp"> 1 </int>
+		<real_array name="tracks/29/keys" len="12"> 			0, 1, 1.76224e-07, -3.25032e-07, 5.58794e-08, -2.59352e-15, 1.95578e-08, -3.50701e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/30/type"> "transform" </string>
+		<node_path name="tracks/30/path"> "body/skeleton:f_index.03.R" </node_path>
+		<int name="tracks/30/interp"> 1 </int>
+		<real_array name="tracks/30/keys" len="12"> 			0, 1, 2.05968e-07, 2.76952e-07, 1.71363e-07, -4.65661e-08, -3.79514e-08, -4.70027e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/31/type"> "transform" </string>
+		<node_path name="tracks/31/path"> "body/skeleton:clavicle.L" </node_path>
+		<int name="tracks/31/interp"> 1 </int>
+		<real_array name="tracks/31/keys" len="12"> 			0, 1, -1.49012e-08, 5.06639e-07, -1.86265e-07, -1.49012e-08, 7.45058e-09, -7.45058e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/32/type"> "transform" </string>
+		<node_path name="tracks/32/path"> "body/skeleton:shin.L" </node_path>
+		<int name="tracks/32/interp"> 1 </int>
+		<real_array name="tracks/32/keys" len="12"> 			0, 1, 2.04891e-08, 2.98023e-08, 0, -9.51178e-18, -1.18405e-10, -1.15806e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/33/type"> "transform" </string>
+		<node_path name="tracks/33/path"> "body/skeleton:deltoid.L" </node_path>
+		<int name="tracks/33/interp"> 1 </int>
+		<real_array name="tracks/33/keys" len="12"> 			0, 1, -1.19209e-07, 1.49012e-07, 1.19209e-07, 8.88178e-16, 4.47035e-08, -1.49012e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/34/type"> "transform" </string>
+		<node_path name="tracks/34/path"> "body/skeleton:upper_arm.L" </node_path>
+		<int name="tracks/34/interp"> 1 </int>
+		<real_array name="tracks/34/keys" len="12"> 			0, 1, 1.546e-07, -2.04891e-07, -5.06639e-07, 1.49012e-08, 2.23517e-08, 2.23517e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/35/type"> "transform" </string>
+		<node_path name="tracks/35/path"> "body/skeleton:forearm.L" </node_path>
+		<int name="tracks/35/interp"> 1 </int>
+		<real_array name="tracks/35/keys" len="12"> 			0, 1, -5.36674e-07, 5.96046e-07, 4.17233e-07, -2.48143e-15, 1.76392e-08, -4.56216e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/36/type"> "transform" </string>
+		<node_path name="tracks/36/path"> "body/skeleton:hand.L" </node_path>
+		<int name="tracks/36/interp"> 1 </int>
+		<real_array name="tracks/36/keys" len="12"> 			0, 1, -1.65775e-07, 1.04308e-07, -5.96046e-08, -1.49012e-08, 2.04891e-08, 1.02445e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/37/type"> "transform" </string>
+		<node_path name="tracks/37/path"> "body/skeleton:palm_pinky.L" </node_path>
+		<int name="tracks/37/interp"> 1 </int>
+		<real_array name="tracks/37/keys" len="12"> 			0, 1, -3.72529e-08, -2.78465e-07, -5.21541e-08, 3.72529e-09, 4.47035e-08, -3.53903e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/38/type"> "transform" </string>
+		<node_path name="tracks/38/path"> "body/skeleton:f_pinky.01.L" </node_path>
+		<int name="tracks/38/interp"> 1 </int>
+		<real_array name="tracks/38/keys" len="12"> 			0, 1, 2.18861e-08, 5.21541e-08, -5.1409e-07, -2.98023e-08, -2.23517e-08, 3.58559e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/39/type"> "transform" </string>
+		<node_path name="tracks/39/path"> "body/skeleton:f_pinky.02.L" </node_path>
+		<int name="tracks/39/interp"> 1 </int>
+		<real_array name="tracks/39/keys" len="12"> 			0, 1, -1.22876e-07, -3.82774e-07, 5.21541e-08, 4.47035e-08, 3.72529e-09, 1.31549e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/40/type"> "transform" </string>
+		<node_path name="tracks/40/path"> "body/skeleton:f_pinky.03.L" </node_path>
+		<int name="tracks/40/interp"> 1 </int>
+		<real_array name="tracks/40/keys" len="12"> 			0, 1, 2.33413e-08, 4.01749e-07, -4.09782e-08, -3.81842e-08, 1.02445e-08, -3.87081e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/41/type"> "transform" </string>
+		<node_path name="tracks/41/path"> "body/skeleton:palm_index.L" </node_path>
+		<int name="tracks/41/interp"> 1 </int>
+		<real_array name="tracks/41/keys" len="12"> 			0, 1, -7.91624e-08, -5.21541e-08, -1.49012e-07, 1.49012e-08, 3.72529e-08, -1.39698e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/42/type"> "transform" </string>
+		<node_path name="tracks/42/path"> "body/skeleton:f_index.01.L" </node_path>
+		<int name="tracks/42/interp"> 1 </int>
+		<real_array name="tracks/42/keys" len="12"> 			0, 1, -5.58794e-09, 2.68221e-07, -1.49012e-07, 3.72529e-08, -2.23517e-08, -3.09665e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/43/type"> "transform" </string>
+		<node_path name="tracks/43/path"> "body/skeleton:foot.L" </node_path>
+		<int name="tracks/43/interp"> 1 </int>
+		<real_array name="tracks/43/keys" len="12"> 			0, 1, 1.49012e-08, -1.78814e-07, 1.19209e-07, -1.66533e-16, 1.11759e-08, 1.86264e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/44/type"> "transform" </string>
+		<node_path name="tracks/44/path"> "body/skeleton:f_index.02.L" </node_path>
+		<int name="tracks/44/interp"> 1 </int>
+		<real_array name="tracks/44/keys" len="12"> 			0, 1, -1.76224e-07, -3.25032e-07, 5.58794e-08, -2.59352e-15, -1.95578e-08, 3.50701e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/45/type"> "transform" </string>
+		<node_path name="tracks/45/path"> "body/skeleton:f_index.03.L" </node_path>
+		<int name="tracks/45/interp"> 1 </int>
+		<real_array name="tracks/45/keys" len="12"> 			0, 1, -2.05968e-07, 2.76952e-07, 1.71363e-07, -4.65661e-08, 3.79514e-08, 4.70027e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/46/type"> "transform" </string>
+		<node_path name="tracks/46/path"> "body/skeleton:palm_ring.L" </node_path>
+		<int name="tracks/46/interp"> 1 </int>
+		<real_array name="tracks/46/keys" len="12"> 			0, 1, -1.76951e-07, -3.77186e-08, 2.30968e-07, 1.49012e-08, 7.45058e-09, 9.31323e-10, 1, 1, 1, 1 </real_array>
+		<string name="tracks/47/type"> "transform" </string>
+		<node_path name="tracks/47/path"> "body/skeleton:f_ring.01.L" </node_path>
+		<int name="tracks/47/interp"> 1 </int>
+		<real_array name="tracks/47/keys" len="12"> 			0, 1, 1.84402e-07, -1.58325e-08, -1.3411e-07, -2.23517e-08, 1.49012e-08, -8.3819e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/48/type"> "transform" </string>
+		<node_path name="tracks/48/path"> "body/skeleton:f_ring.02.L" </node_path>
+		<int name="tracks/48/interp"> 1 </int>
+		<real_array name="tracks/48/keys" len="12"> 			0, 1, 6.47269e-08, 2.14204e-08, -1.86265e-07, 1.73473e-18, -3.72529e-09, -8.3819e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/49/type"> "transform" </string>
+		<node_path name="tracks/49/path"> "body/skeleton:f_ring.03.L" </node_path>
+		<int name="tracks/49/interp"> 1 </int>
+		<real_array name="tracks/49/keys" len="12"> 			0, 1, -9.49949e-08, 3.80678e-08, -9.68575e-08, 1.02445e-08, -1.11759e-08, -7.47968e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/50/type"> "transform" </string>
+		<node_path name="tracks/50/path"> "body/skeleton:palm_middle.L" </node_path>
+		<int name="tracks/50/interp"> 1 </int>
+		<real_array name="tracks/50/keys" len="12"> 			0, 1, 1.78814e-07, 9.77889e-09, -8.9407e-08, 2.23517e-08, 1.72877e-08, -2.43599e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/51/type"> "transform" </string>
+		<node_path name="tracks/51/path"> "body/skeleton:f_middle.01.L" </node_path>
+		<int name="tracks/51/interp"> 1 </int>
+		<real_array name="tracks/51/keys" len="12"> 			0, 1, -4.5076e-07, -2.99886e-07, 8.9407e-08, -7.45058e-09, -2.23517e-08, -2.04891e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/52/type"> "transform" </string>
+		<node_path name="tracks/52/path"> "body/skeleton:f_middle.02.L" </node_path>
+		<int name="tracks/52/interp"> 1 </int>
+		<real_array name="tracks/52/keys" len="12"> 			0, 1, 1.52853e-07, 3.18512e-07, -1.86265e-07, 7.45058e-09, -5.12228e-09, 7.68341e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/53/type"> "transform" </string>
+		<node_path name="tracks/53/path"> "body/skeleton:f_middle.03.L" </node_path>
+		<int name="tracks/53/interp"> 1 </int>
+		<real_array name="tracks/53/keys" len="12"> 			0, 1, -8.21892e-08, -5.52682e-07, 8.56817e-08, 6.98492e-10, 2.79397e-09, -6.99219e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/54/type"> "transform" </string>
+		<node_path name="tracks/54/path"> "body/skeleton:toe.L" </node_path>
+		<int name="tracks/54/interp"> 1 </int>
+		<real_array name="tracks/54/keys" len="12"> 			0, 1, 3.76023e-08, 0, -5.96046e-08, 1.49012e-08, -5.63659e-10, -6.66489e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/55/type"> "transform" </string>
+		<node_path name="tracks/55/path"> "body/skeleton:thumb.01.L" </node_path>
+		<int name="tracks/55/interp"> 1 </int>
+		<real_array name="tracks/55/keys" len="12"> 			0, 1, 1.3411e-07, 5.45755e-07, -8.19564e-08, 3.10862e-15, 2.98023e-08, 2.23517e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/56/type"> "transform" </string>
+		<node_path name="tracks/56/path"> "body/skeleton:thumb.02.L" </node_path>
+		<int name="tracks/56/interp"> 1 </int>
+		<real_array name="tracks/56/keys" len="12"> 			0, 1, 4.09782e-08, -5.15953e-07, 5.96046e-08, 3.72529e-09, 3.46945e-17, 9.31322e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/57/type"> "transform" </string>
+		<node_path name="tracks/57/path"> "body/skeleton:thumb.03.L" </node_path>
+		<int name="tracks/57/interp"> 1 </int>
+		<real_array name="tracks/57/keys" len="12"> 			0, 1, -1.16415e-07, 9.96515e-08, -9.68575e-08, 4.47035e-08, 2.02563e-08, 2.03872e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/58/type"> "transform" </string>
+		<node_path name="tracks/58/path"> "body/skeleton:neck" </node_path>
+		<int name="tracks/58/interp"> 1 </int>
+		<real_array name="tracks/58/keys" len="12"> 			0, 1, -6.93889e-17, -2.98023e-08, -2.38419e-07, 9.62965e-35, -1.38778e-17, -6.93889e-18, 1, 1, 1, 1 </real_array>
+		<string name="tracks/59/type"> "transform" </string>
+		<node_path name="tracks/59/path"> "body/skeleton:head" </node_path>
+		<int name="tracks/59/interp"> 1 </int>
+		<real_array name="tracks/59/keys" len="12"> 			0, 1, -1.38778e-17, 1.86265e-08, 1.49012e-08, 0, 0, 3.46945e-18, 1, 1, 1, 1 </real_array>
+		<string name="tracks/60/type"> "transform" </string>
+		<node_path name="tracks/60/path"> "body/skeleton:jaw" </node_path>
+		<int name="tracks/60/interp"> 1 </int>
+		<real_array name="tracks/60/keys" len="12"> 			0, 1, -6.78711e-17, -1.11759e-07, -1.49012e-07, 1.49012e-08, 0, 0, 1, 1, 1, 1 </real_array>
+		<string name="tracks/61/type"> "transform" </string>
+		<node_path name="tracks/61/path"> "body/skeleton:tongue_base" </node_path>
+		<int name="tracks/61/interp"> 1 </int>
+		<real_array name="tracks/61/keys" len="12"> 			0, 1, -2.31611e-23, -2.68221e-07, -2.04891e-08, 1.49012e-08, -6.61744e-24, -1.98523e-23, 1, 1, 1, 1 </real_array>
+		<string name="tracks/62/type"> "transform" </string>
+		<node_path name="tracks/62/path"> "body/skeleton:tongue_mid" </node_path>
+		<int name="tracks/62/interp"> 1 </int>
+		<real_array name="tracks/62/keys" len="12"> 			0, 1, 6.10046e-24, 6.98492e-07, -5.21541e-08, 0, -1.32349e-23, 8.5303e-25, 1, 1, 1, 1 </real_array>
+		<string name="tracks/63/type"> "transform" </string>
+		<node_path name="tracks/63/path"> "body/skeleton:tongue_tip" </node_path>
+		<int name="tracks/63/interp"> 1 </int>
+		<real_array name="tracks/63/keys" len="12"> 			0, 1, -8.80947e-23, -6.61239e-07, 2.79397e-07, 1.49012e-08, 1.32349e-23, 2.39882e-23, 1, 1, 1, 1 </real_array>
+		<string name="tracks/64/type"> "transform" </string>
+		<node_path name="tracks/64/path"> "body/skeleton:uplid.L" </node_path>
+		<int name="tracks/64/interp"> 1 </int>
+		<real_array name="tracks/64/keys" len="12"> 			0, 1, 0, -3.31551e-07, -2.98023e-08, -2.40741e-35, -1.73472e-18, -1.38778e-17, 1, 1, 1, 1 </real_array>
+		<string name="tracks/65/type"> "transform" </string>
+		<node_path name="tracks/65/path"> "body/skeleton:thigh.R" </node_path>
+		<int name="tracks/65/interp"> 1 </int>
+		<real_array name="tracks/65/keys" len="12"> 			0, 1, 2.98023e-08, 7.45058e-09, -2.27243e-07, 2.86229e-17, 1.86265e-09, 1.42027e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/66/type"> "transform" </string>
+		<node_path name="tracks/66/path"> "body/skeleton:eye.R" </node_path>
+		<int name="tracks/66/interp"> 1 </int>
+		<real_array name="tracks/66/keys" len="12"> 			0, 1, -2.90573e-07, -1.58325e-07, 7.45058e-08, -9.31323e-10, 1.86265e-09, 2.98023e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/67/type"> "transform" </string>
+		<node_path name="tracks/67/path"> "body/skeleton:eye.L" </node_path>
+		<int name="tracks/67/interp"> 1 </int>
+		<real_array name="tracks/67/keys" len="12"> 			0, 1, 2.90573e-07, -1.58325e-07, 7.45058e-08, -1.02446e-08, -1.86264e-09, -2.98023e-08, 1, 1, 1, 1 </real_array>
+		<string name="tracks/68/type"> "transform" </string>
+		<node_path name="tracks/68/path"> "body/skeleton:lolid.L" </node_path>
+		<int name="tracks/68/interp"> 1 </int>
+		<real_array name="tracks/68/keys" len="12"> 			0, 1, 0, -3.42727e-07, 5.96046e-08, 1.49012e-08, -2.77556e-17, 4.1359e-25, 1, 1, 1, 1 </real_array>
+		<string name="tracks/69/type"> "transform" </string>
+		<node_path name="tracks/69/path"> "body/skeleton:uplid.R" </node_path>
+		<int name="tracks/69/interp"> 1 </int>
+		<real_array name="tracks/69/keys" len="12"> 			0, 1, 0, -3.31551e-07, -2.98023e-08, 7.45058e-09, -6.93889e-18, 0, 1, 1, 1, 1 </real_array>
+		<string name="tracks/70/type"> "transform" </string>
+		<node_path name="tracks/70/path"> "body/skeleton:lolid.R" </node_path>
+		<int name="tracks/70/interp"> 1 </int>
+		<real_array name="tracks/70/keys" len="12"> 			0, 1, 0, -3.42727e-07, 5.96046e-08, 1.49012e-08, -2.77556e-17, 4.1359e-25, 1, 1, 1, 1 </real_array>
+		<string name="tracks/71/type"> "transform" </string>
+		<node_path name="tracks/71/path"> "body/skeleton:shin.R" </node_path>
+		<int name="tracks/71/interp"> 1 </int>
+		<real_array name="tracks/71/keys" len="12"> 			0, 1, -2.04891e-08, 2.98023e-08, 0, -9.51178e-18, 1.18405e-10, 1.15806e-09, 1, 1, 1, 1 </real_array>
+		<string name="tracks/72/type"> "transform" </string>
+		<node_path name="tracks/72/path"> "body/skeleton:foot.R" </node_path>
+		<int name="tracks/72/interp"> 1 </int>
+		<real_array name="tracks/72/keys" len="12"> 			0, 1, -1.49012e-08, -1.78814e-07, 1.19209e-07, -1.66533e-16, -1.11759e-08, -1.86264e-09, 1, 1, 1, 1 </real_array>
+
+	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="444">
+			<string_array  len="430">
 				<string> "uspgamedude" </string>
 				<string> "RigidBody" </string>
 				<string> "_import_path" </string>
@@ -1772,10 +1773,6 @@
 				<string> "velocity/angular" </string>
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
-				<string> "collision_body" </string>
-				<string> "CollisionShape" </string>
-				<string> "shape" </string>
-				<string> "trigger" </string>
 				<string> "body" </string>
 				<string> "Spatial" </string>
 				<string> "skeleton" </string>
@@ -2176,31 +2173,21 @@
 				<string> "root/root" </string>
 				<string> "anims/punch" </string>
 				<string> "anims/walk" </string>
-				<string> "anims/default" </string>
 				<string> "anims/shield" </string>
+				<string> "anims/default" </string>
 				<string> "playback/active" </string>
 				<string> "playback/speed" </string>
 				<string> "blend_times" </string>
 				<string> "autoplay" </string>
-				<string> "Camera" </string>
-				<string> "projection" </string>
-				<string> "fov" </string>
-				<string> "near" </string>
-				<string> "far" </string>
-				<string> "vaspect" </string>
-				<string> "current" </string>
-				<string> "visible_layers" </string>
-				<string> "environment" </string>
-				<string> "Direction" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 15 </int>
+			<int> 12 </int>
 			<string> "variants" </string>
-			<array  len="249" shared="false">
+			<array  len="241" shared="false">
 				<node_path> "." </node_path>
 				<transform> 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 </transform>
 				<transform> 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 </transform>
@@ -2210,7 +2197,6 @@
 				<bool> False </bool>
 				<int> 2 </int>
 				<real> 1 </real>
-				<real> 0.3 </real>
 				<real> 0 </real>
 				<int> 0 </int>
 				<bool> True </bool>
@@ -2219,15 +2205,6 @@
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
-						<string> "Script" </string>
-						<dictionary  shared="false">
-							<string> "current" </string>
-							<int> 0 </int>
-							<string> "sources" </string>
-							<array  len="1" shared="false">
-								<string> "res://models/uspgamedude/uspgamedude.gd" </string>
-							</array>
-						</dictionary>
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "pixel_snap" </string>
@@ -2251,17 +2228,17 @@
 							<array  len="4" shared="false">
 								<dictionary  shared="false">
 									<string> "distance" </string>
-									<real> 6.190506 </real>
+									<real> 4.665599 </real>
 									<string> "x_rot" </string>
-									<real> 0.420796 </real>
+									<real> 0.283296 </real>
 									<string> "y_rot" </string>
-									<real> -18.437437 </real>
+									<real> -0.624986 </real>
 									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
-									<vector3> -0.567582, 1.52358, 0.370557 </vector3>
+									<vector3> 0.217783, 1.20084, -0.604853 </vector3>
 								</dictionary>
 								<dictionary  shared="false">
 									<string> "distance" </string>
@@ -2328,13 +2305,8 @@
 					<string> "__editor_plugin_screen__" </string>
 					<string> "3D" </string>
 				</dictionary>
-				<node_path> "" </node_path>
 				<node_path> "uspgamedude" </node_path>
 				<transform> 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0511922, 0 </transform>
-				<dictionary  shared="false">
-					<string> "_editor_collapsed" </string>
-					<bool> True </bool>
-				</dictionary>
 				<node_path> "uspgamedude/Skeleton" </node_path>
 				<string> "hips" </string>
 				<int> -1 </int>
@@ -2559,14 +2531,9 @@
 				<resource  resource_type="Animation" path="local://20">  </resource>
 				<resource  resource_type="Animation" path="local://21">  </resource>
 				<string> "shield" </string>
-				<transform> -0.989376, 0.0577219, -0.133428, -1.47535e-09, 0.917799, 0.397046, 0.145378, 0.392828, -0.908048, -1.8826, 4.93731, -5.08496 </transform>
-				<real> 60 </real>
-				<real> 0.1 </real>
-				<real> 100 </real>
-				<transform> 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 </transform>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="1225"> 				-1, -1, 1, 0, -1, 22, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 12, 10, 13, 6, 14, 6, 15, 11, 16, 6, 17, 12, 18, 12, 19, 11, 20, 13, 21, 13, 22, 14, 23, 15, 0, 0, 0, 25, 24, -1, 5, 2, 16, 3, 1, 4, 5, 26, 4, 27, 6, 0, 0, 0, 29, 28, -1, 4, 2, 17, 3, 18, 4, 18, 23, 19, 0, 2, 0, 31, 30, -1, 367, 2, 20, 3, 1, 32, 21, 33, 22, 34, 23, 35, 12, 36, 24, 37, 25, 38, 11, 39, 26, 40, 12, 41, 24, 42, 27, 43, 3, 44, 28, 45, 12, 46, 24, 47, 29, 48, 7, 49, 30, 50, 12, 51, 24, 52, 31, 53, 32, 54, 33, 55, 12, 56, 24, 57, 34, 58, 11, 59, 35, 60, 12, 61, 24, 62, 36, 63, 37, 64, 38, 65, 12, 66, 24, 67, 39, 68, 40, 69, 41, 70, 12, 71, 24, 72, 42, 73, 43, 74, 44, 75, 12, 76, 24, 77, 45, 78, 11, 79, 46, 80, 12, 81, 24, 82, 47, 83, 48, 84, 49, 85, 12, 86, 24, 87, 50, 88, 51, 89, 52, 90, 12, 91, 24, 92, 53, 93, 54, 94, 55, 95, 12, 96, 24, 97, 56, 98, 57, 99, 58, 100, 12, 101, 24, 102, 59, 103, 60, 104, 61, 105, 12, 106, 24, 107, 62, 108, 63, 109, 64, 110, 12, 111, 24, 112, 65, 113, 66, 114, 67, 115, 12, 116, 24, 117, 68, 118, 69, 119, 70, 120, 12, 121, 24, 122, 71, 123, 72, 124, 73, 125, 12, 126, 24, 127, 74, 128, 75, 129, 76, 130, 12, 131, 24, 132, 77, 133, 78, 134, 79, 135, 12, 136, 24, 137, 80, 138, 81, 139, 82, 140, 12, 141, 24, 142, 83, 143, 72, 144, 84, 145, 12, 146, 24, 147, 85, 148, 86, 149, 87, 150, 12, 151, 24, 152, 88, 153, 89, 154, 90, 155, 12, 156, 24, 157, 91, 158, 92, 159, 93, 160, 12, 161, 24, 162, 94, 163, 72, 164, 95, 165, 12, 166, 24, 167, 96, 168, 97, 169, 98, 170, 12, 171, 24, 172, 99, 173, 100, 174, 101, 175, 12, 176, 24, 177, 102, 178, 103, 179, 104, 180, 12, 181, 24, 182, 105, 183, 72, 184, 106, 185, 12, 186, 24, 187, 107, 188, 108, 189, 109, 190, 12, 191, 24, 192, 110, 193, 111, 194, 112, 195, 12, 196, 24, 197, 113, 198, 72, 199, 114, 200, 12, 201, 24, 202, 115, 203, 116, 204, 117, 205, 12, 206, 24, 207, 118, 208, 119, 209, 120, 210, 12, 211, 24, 212, 121, 213, 122, 214, 123, 215, 12, 216, 24, 217, 124, 218, 57, 219, 125, 220, 12, 221, 24, 222, 126, 223, 127, 224, 128, 225, 12, 226, 24, 227, 129, 228, 130, 229, 131, 230, 12, 231, 24, 232, 132, 233, 133, 234, 134, 235, 12, 236, 24, 237, 135, 238, 136, 239, 137, 240, 12, 241, 24, 242, 138, 243, 139, 244, 140, 245, 12, 246, 24, 247, 141, 248, 142, 249, 143, 250, 12, 251, 24, 252, 144, 253, 145, 254, 146, 255, 12, 256, 24, 257, 147, 258, 148, 259, 149, 260, 12, 261, 24, 262, 150, 263, 139, 264, 151, 265, 12, 266, 24, 267, 152, 268, 153, 269, 154, 270, 12, 271, 24, 272, 155, 273, 156, 274, 157, 275, 12, 276, 24, 277, 158, 278, 159, 279, 160, 280, 12, 281, 24, 282, 161, 283, 139, 284, 162, 285, 12, 286, 24, 287, 163, 288, 164, 289, 165, 290, 12, 291, 24, 292, 166, 293, 167, 294, 168, 295, 12, 296, 24, 297, 169, 298, 170, 299, 171, 300, 12, 301, 24, 302, 172, 303, 139, 304, 173, 305, 12, 306, 24, 307, 174, 308, 175, 309, 176, 310, 12, 311, 24, 312, 177, 313, 178, 314, 179, 315, 12, 316, 24, 317, 180, 318, 181, 319, 182, 320, 12, 321, 24, 322, 183, 323, 139, 324, 184, 325, 12, 326, 24, 327, 185, 328, 186, 329, 187, 330, 12, 331, 24, 332, 188, 333, 189, 334, 190, 335, 12, 336, 24, 337, 191, 338, 57, 339, 192, 340, 12, 341, 24, 342, 193, 343, 194, 344, 195, 345, 12, 346, 24, 347, 196, 348, 197, 349, 198, 350, 12, 351, 24, 352, 199, 353, 200, 354, 201, 355, 12, 356, 24, 357, 202, 358, 203, 359, 204, 360, 12, 361, 24, 362, 205, 363, 206, 364, 207, 365, 12, 366, 24, 367, 208, 368, 197, 369, 209, 370, 12, 371, 24, 372, 210, 373, 197, 374, 211, 375, 12, 376, 24, 377, 212, 378, 197, 379, 213, 380, 12, 381, 24, 382, 214, 383, 197, 384, 215, 385, 12, 386, 24, 387, 216, 388, 197, 389, 217, 390, 12, 391, 24, 392, 218, 393, 197, 394, 219, 395, 12, 396, 24, 0, 3, 0, 398, 397, -1, 17, 2, 220, 3, 1, 399, 3, 400, 12, 401, 221, 402, 12, 403, 12, 404, 10, 405, 10, 406, 6, 407, 6, 408, 6, 409, 6, 410, 12, 411, 11, 412, 222, 413, 223, 0, 3, 0, 398, 414, -1, 17, 2, 224, 3, 1, 399, 3, 400, 12, 401, 221, 402, 12, 403, 12, 404, 10, 405, 10, 406, 6, 407, 6, 408, 6, 409, 6, 410, 12, 411, 11, 412, 225, 413, 223, 0, 3, 0, 398, 415, -1, 17, 2, 226, 3, 1, 399, 3, 400, 12, 401, 221, 402, 12, 403, 12, 404, 10, 405, 10, 406, 6, 407, 6, 408, 6, 409, 6, 410, 12, 411, 11, 412, 227, 413, 223, 0, 3, 0, 398, 416, -1, 17, 2, 228, 3, 1, 399, 3, 400, 12, 401, 221, 402, 12, 403, 12, 404, 10, 405, 10, 406, 6, 407, 6, 408, 6, 409, 6, 410, 12, 411, 11, 412, 229, 413, 223, 0, 3, 0, 398, 417, -1, 17, 2, 230, 3, 1, 399, 3, 400, 12, 401, 221, 402, 12, 403, 12, 404, 10, 405, 10, 406, 6, 407, 6, 408, 6, 409, 6, 410, 12, 411, 11, 412, 231, 413, 223, 0, 3, 0, 398, 418, -1, 17, 2, 232, 3, 1, 399, 3, 400, 12, 401, 221, 402, 12, 403, 12, 404, 10, 405, 10, 406, 6, 407, 6, 408, 6, 409, 6, 410, 12, 411, 11, 412, 233, 413, 223, 0, 3, 0, 398, 419, -1, 17, 2, 234, 3, 1, 399, 3, 400, 12, 401, 221, 402, 12, 403, 12, 404, 10, 405, 10, 406, 6, 407, 6, 408, 6, 409, 6, 410, 12, 411, 11, 412, 235, 413, 223, 0, 3, 0, 398, 420, -1, 17, 2, 236, 3, 1, 399, 3, 400, 12, 401, 221, 402, 12, 403, 12, 404, 10, 405, 10, 406, 6, 407, 6, 408, 6, 409, 6, 410, 12, 411, 11, 412, 237, 413, 223, 0, 0, 0, 422, 421, -1, 12, 2, 238, 423, 3, 424, 10, 425, 223, 426, 239, 427, 240, 428, 241, 429, 242, 430, 12, 431, 8, 432, 24, 433, 243, 0, 0, 0, 434, 434, -1, 11, 2, 16, 3, 1, 4, 244, 435, 11, 436, 245, 437, 246, 438, 247, 439, 6, 440, 6, 441, 22, 442, 221, 0, 0, 0, 29, 443, -1, 3, 2, 16, 3, 1, 4, 248, 0 </int_array>
+			<int_array  len="1164"> 				-1, -1, 1, 0, -1, 22, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 8, 12, 9, 13, 6, 14, 6, 15, 10, 16, 6, 17, 11, 18, 11, 19, 10, 20, 12, 21, 12, 22, 13, 23, 14, 0, 0, 0, 25, 24, -1, 3, 2, 15, 3, 16, 4, 16, 0, 1, 0, 27, 26, -1, 367, 2, 17, 3, 1, 28, 18, 29, 19, 30, 20, 31, 11, 32, 21, 33, 22, 34, 10, 35, 23, 36, 11, 37, 21, 38, 24, 39, 3, 40, 25, 41, 11, 42, 21, 43, 26, 44, 7, 45, 27, 46, 11, 47, 21, 48, 28, 49, 29, 50, 30, 51, 11, 52, 21, 53, 31, 54, 10, 55, 32, 56, 11, 57, 21, 58, 33, 59, 34, 60, 35, 61, 11, 62, 21, 63, 36, 64, 37, 65, 38, 66, 11, 67, 21, 68, 39, 69, 40, 70, 41, 71, 11, 72, 21, 73, 42, 74, 10, 75, 43, 76, 11, 77, 21, 78, 44, 79, 45, 80, 46, 81, 11, 82, 21, 83, 47, 84, 48, 85, 49, 86, 11, 87, 21, 88, 50, 89, 51, 90, 52, 91, 11, 92, 21, 93, 53, 94, 54, 95, 55, 96, 11, 97, 21, 98, 56, 99, 57, 100, 58, 101, 11, 102, 21, 103, 59, 104, 60, 105, 61, 106, 11, 107, 21, 108, 62, 109, 63, 110, 64, 111, 11, 112, 21, 113, 65, 114, 66, 115, 67, 116, 11, 117, 21, 118, 68, 119, 69, 120, 70, 121, 11, 122, 21, 123, 71, 124, 72, 125, 73, 126, 11, 127, 21, 128, 74, 129, 75, 130, 76, 131, 11, 132, 21, 133, 77, 134, 78, 135, 79, 136, 11, 137, 21, 138, 80, 139, 69, 140, 81, 141, 11, 142, 21, 143, 82, 144, 83, 145, 84, 146, 11, 147, 21, 148, 85, 149, 86, 150, 87, 151, 11, 152, 21, 153, 88, 154, 89, 155, 90, 156, 11, 157, 21, 158, 91, 159, 69, 160, 92, 161, 11, 162, 21, 163, 93, 164, 94, 165, 95, 166, 11, 167, 21, 168, 96, 169, 97, 170, 98, 171, 11, 172, 21, 173, 99, 174, 100, 175, 101, 176, 11, 177, 21, 178, 102, 179, 69, 180, 103, 181, 11, 182, 21, 183, 104, 184, 105, 185, 106, 186, 11, 187, 21, 188, 107, 189, 108, 190, 109, 191, 11, 192, 21, 193, 110, 194, 69, 195, 111, 196, 11, 197, 21, 198, 112, 199, 113, 200, 114, 201, 11, 202, 21, 203, 115, 204, 116, 205, 117, 206, 11, 207, 21, 208, 118, 209, 119, 210, 120, 211, 11, 212, 21, 213, 121, 214, 54, 215, 122, 216, 11, 217, 21, 218, 123, 219, 124, 220, 125, 221, 11, 222, 21, 223, 126, 224, 127, 225, 128, 226, 11, 227, 21, 228, 129, 229, 130, 230, 131, 231, 11, 232, 21, 233, 132, 234, 133, 235, 134, 236, 11, 237, 21, 238, 135, 239, 136, 240, 137, 241, 11, 242, 21, 243, 138, 244, 139, 245, 140, 246, 11, 247, 21, 248, 141, 249, 142, 250, 143, 251, 11, 252, 21, 253, 144, 254, 145, 255, 146, 256, 11, 257, 21, 258, 147, 259, 136, 260, 148, 261, 11, 262, 21, 263, 149, 264, 150, 265, 151, 266, 11, 267, 21, 268, 152, 269, 153, 270, 154, 271, 11, 272, 21, 273, 155, 274, 156, 275, 157, 276, 11, 277, 21, 278, 158, 279, 136, 280, 159, 281, 11, 282, 21, 283, 160, 284, 161, 285, 162, 286, 11, 287, 21, 288, 163, 289, 164, 290, 165, 291, 11, 292, 21, 293, 166, 294, 167, 295, 168, 296, 11, 297, 21, 298, 169, 299, 136, 300, 170, 301, 11, 302, 21, 303, 171, 304, 172, 305, 173, 306, 11, 307, 21, 308, 174, 309, 175, 310, 176, 311, 11, 312, 21, 313, 177, 314, 178, 315, 179, 316, 11, 317, 21, 318, 180, 319, 136, 320, 181, 321, 11, 322, 21, 323, 182, 324, 183, 325, 184, 326, 11, 327, 21, 328, 185, 329, 186, 330, 187, 331, 11, 332, 21, 333, 188, 334, 54, 335, 189, 336, 11, 337, 21, 338, 190, 339, 191, 340, 192, 341, 11, 342, 21, 343, 193, 344, 194, 345, 195, 346, 11, 347, 21, 348, 196, 349, 197, 350, 198, 351, 11, 352, 21, 353, 199, 354, 200, 355, 201, 356, 11, 357, 21, 358, 202, 359, 203, 360, 204, 361, 11, 362, 21, 363, 205, 364, 194, 365, 206, 366, 11, 367, 21, 368, 207, 369, 194, 370, 208, 371, 11, 372, 21, 373, 209, 374, 194, 375, 210, 376, 11, 377, 21, 378, 211, 379, 194, 380, 212, 381, 11, 382, 21, 383, 213, 384, 194, 385, 214, 386, 11, 387, 21, 388, 215, 389, 194, 390, 216, 391, 11, 392, 21, 0, 2, 0, 394, 393, -1, 17, 2, 217, 3, 1, 395, 3, 396, 11, 397, 218, 398, 11, 399, 11, 400, 9, 401, 9, 402, 6, 403, 6, 404, 6, 405, 6, 406, 11, 407, 10, 408, 219, 409, 220, 0, 2, 0, 394, 410, -1, 17, 2, 221, 3, 1, 395, 3, 396, 11, 397, 218, 398, 11, 399, 11, 400, 9, 401, 9, 402, 6, 403, 6, 404, 6, 405, 6, 406, 11, 407, 10, 408, 222, 409, 220, 0, 2, 0, 394, 411, -1, 17, 2, 223, 3, 1, 395, 3, 396, 11, 397, 218, 398, 11, 399, 11, 400, 9, 401, 9, 402, 6, 403, 6, 404, 6, 405, 6, 406, 11, 407, 10, 408, 224, 409, 220, 0, 2, 0, 394, 412, -1, 17, 2, 225, 3, 1, 395, 3, 396, 11, 397, 218, 398, 11, 399, 11, 400, 9, 401, 9, 402, 6, 403, 6, 404, 6, 405, 6, 406, 11, 407, 10, 408, 226, 409, 220, 0, 2, 0, 394, 413, -1, 17, 2, 227, 3, 1, 395, 3, 396, 11, 397, 218, 398, 11, 399, 11, 400, 9, 401, 9, 402, 6, 403, 6, 404, 6, 405, 6, 406, 11, 407, 10, 408, 228, 409, 220, 0, 2, 0, 394, 414, -1, 17, 2, 229, 3, 1, 395, 3, 396, 11, 397, 218, 398, 11, 399, 11, 400, 9, 401, 9, 402, 6, 403, 6, 404, 6, 405, 6, 406, 11, 407, 10, 408, 230, 409, 220, 0, 2, 0, 394, 415, -1, 17, 2, 231, 3, 1, 395, 3, 396, 11, 397, 218, 398, 11, 399, 11, 400, 9, 401, 9, 402, 6, 403, 6, 404, 6, 405, 6, 406, 11, 407, 10, 408, 232, 409, 220, 0, 2, 0, 394, 416, -1, 17, 2, 233, 3, 1, 395, 3, 396, 11, 397, 218, 398, 11, 399, 11, 400, 9, 401, 9, 402, 6, 403, 6, 404, 6, 405, 6, 406, 11, 407, 10, 408, 234, 409, 220, 0, 0, 0, 418, 417, -1, 12, 2, 235, 419, 3, 420, 9, 421, 220, 422, 236, 423, 237, 424, 238, 425, 239, 426, 11, 427, 8, 428, 21, 429, 240, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
