@@ -1,11 +1,11 @@
 extends RigidBody
 
 var camera_style = 0
-var CAMERA_COUNT = 2
+var CAMERA_COUNT = 3
 var cameras
 
 func _ready():
-    cameras = [get_node("shoulder_camera"), get_node("head_camera")]
+    cameras = [get_node("shoulder_camera"), get_node("head_camera"), get_node("rear_camera")]
     set_process_input(true)
 
 func _input(ie):
@@ -15,7 +15,9 @@ func _input(ie):
             cameras[camera_style].make_current()
 
 var walk_speed = 5
-var turn_speed = 0.8
+var cur_speed
+var run_speed = 25
+var turn_speed = 1.2
 var jump_speed = 2
 var jumping = 0
 var jump_max = 0.35
@@ -31,7 +33,6 @@ func animate(name):
         player.play(name)
 
 func _integrate_forces(state):
-    print(jumping)
     var gravity = state.get_total_gravity()
     var delta = state.get_step()
 
@@ -40,12 +41,18 @@ func _integrate_forces(state):
     var left    = Input.is_action_pressed("left")
     var right   = Input.is_action_pressed("right")
     var jump    = Input.is_action_pressed("jump")
+    var run    = Input.is_action_pressed("run")
     
 
     if jumping > 0:
         jumping -= state.get_step()
     else: 
         jumping = 0  
+
+    if run:
+        cur_speed = run_speed
+    else:
+        cur_speed = walk_speed
 
     var on_floor = true
     is_jump = false
@@ -66,11 +73,11 @@ func _integrate_forces(state):
         var previous_velocity = state.get_linear_velocity()
 
         if forward:
-            velocity += direction * walk_speed
+            velocity += direction * cur_speed
             if is_jump == false :
                 animate("walk")
         if backward:
-            velocity -= direction * walk_speed
+            velocity -= direction * cur_speed
             if is_jump == false:
                 animate("walk")
 
