@@ -1,8 +1,18 @@
 extends RigidBody
 
+var camera_style = 0
+var CAMERA_COUNT = 2
+var cameras
+
 func _ready():
-    # Initalization here
-    pass
+    cameras = [get_node("shoulder_camera"), get_node("head_camera")]
+    set_process_input(true)
+
+func _input(ie):
+    if ie.is_pressed() and not ie.is_echo() and ie.is_action("change_camera"):
+        camera_style = (camera_style + 1) % CAMERA_COUNT
+        if cameras[camera_style] != null:
+            cameras[camera_style].make_current()
 
 var walk_speed = 5
 var turn_speed = 0.8
