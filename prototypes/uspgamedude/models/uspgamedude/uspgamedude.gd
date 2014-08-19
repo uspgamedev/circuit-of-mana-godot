@@ -27,13 +27,13 @@ func _integrate_forces(state):
     var right   = Input.is_action_pressed("right")
     var jump    = Input.is_action_pressed("jump")
 
-    var on_floor = false
-    for i in range(state.get_contact_count()):
-        if (state.get_contact_local_shape(i) == 1):
-            on_floor = true
-            break
+    var on_floor = true
+    if state.get_contact_count() == 0:
+        on_floor = false
 
     if forward or backward or jump:
+        set_friction(0)
+
         # Get node "body" as a fixed reference attached to the character.
         # The componentes are: [0]: x -> left right
         #                      [1]: y -> up down
@@ -50,13 +50,6 @@ func _integrate_forces(state):
             velocity -= direction * walk_speed
             animate("walk")
 
-        # If character is standing still, give him a little upward velocity just
-        # to not get stuck 
-        if (forward or backward) and previous_velocity.length_squared() <= 0.1:
-            #print("-> Up kick")
-            #velocity -= gravity * delta * jump_speed
-            velocity -= gravity * delta * 10
-
         if jump:
             velocity -= gravity * delta * jump_speed
 
@@ -66,6 +59,9 @@ func _integrate_forces(state):
         # Finally set the new linear velocity to the character.
         state.set_linear_velocity(velocity)
     else:
+        set_friction(1)
+        if on_floor:
+            state.set_linear_velocity(Vector3(0, 0, 0))
         animate("default")
 
     # If left or right are pressed, turn. Else stop turning.
