@@ -1,26 +1,51 @@
 extends RigidBody
 
+
+export var walk_speed = 5
+export var run_speed = 25
+export var turn_speed = 1.2
+export var jump_speed = 2
+export var jump_max = 0.35
+export var view_sensitivity = 0.3
+
 var camera_style = 0
 var CAMERA_COUNT = 3
 var cameras
 
 func _ready():
-    cameras = [get_node("shoulder_camera"), get_node("head_camera"), get_node("rear_camera")]
+    cameras = [get_node("cams/base_shoulder/shoulder_camera"), 
+        get_node("cams/base_head/head_camera"), get_node("cams/base_rear/rear_camera")]
     set_process_input(true)
+
+func _enter_scene():
+    Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func _exit_scene():
+    Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+var rx = 0
+var ry = 0
 
 func _input(ie):
     if ie.is_pressed() and not ie.is_echo() and ie.is_action("change_camera"):
         camera_style = (camera_style + 1) % CAMERA_COUNT
         if cameras[camera_style] != null:
             cameras[camera_style].make_current()
+    elif ie.type == InputEvent.MOUSE_MOTION:
+        rx = fmod(rx + ie.relative_x * view_sensitivity, 360)
+        ry = max(min(fmod(ry + ie.relative_y * view_sensitivity, 360), 17), -28)
+        var cams = get_node("cams")
+        #setting yaw
+        cams.set_rotation(Vector3(0, -deg2rad(rx), 0))
+        var ry_rad = deg2rad(ry)
 
-var walk_speed = 5
+        #setting pitch
+        for cam in cams.get_children():
+            cam.set_rotation(Vector3(ry_rad, 0, 0))
+
+
 var cur_speed
-var run_speed = 25
-var turn_speed = 1.2
-var jump_speed = 2
 var jumping = 0
-var jump_max = 0.35
 var is_jump = false
 
 func animate(name):
