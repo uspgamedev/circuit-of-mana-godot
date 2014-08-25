@@ -7,15 +7,18 @@ export var turn_speed = 1.2
 export var jump_speed = 2
 export var jump_max = 0.35
 export var view_sensitivity = 0.3
+export var camera_relative = false
 
 var camera_style = 0
 var CAMERA_COUNT = 3
 var cameras
+var cams_node
 
 func _ready():
     cameras = [get_node("cams/base_shoulder/shoulder_camera"), 
         get_node("cams/base_head/head_camera"), get_node("cams/base_rear/rear_camera")]
     set_process_input(true)
+    cams_node = get_node("cams")
 
 func _enter_scene():
     Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -27,20 +30,22 @@ var rx = 0
 var ry = 0
 
 func _input(ie):
-    if ie.is_pressed() and not ie.is_echo() and ie.is_action("change_camera"):
-        camera_style = (camera_style + 1) % CAMERA_COUNT
-        if cameras[camera_style] != null:
-            cameras[camera_style].make_current()
+    if ie.is_pressed() and not ie.is_echo():
+        if ie.is_action("change_camera"):
+            camera_style = (camera_style + 1) % CAMERA_COUNT
+            if cameras[camera_style] != null:
+                cameras[camera_style].make_current()
+        elif ie.is_action("change_movement"):
+            camera_relative = not camera_relative
     elif ie.type == InputEvent.MOUSE_MOTION:
         rx = fmod(rx + ie.relative_x * view_sensitivity, 360)
         ry = max(min(fmod(ry + ie.relative_y * view_sensitivity, 360), 17), -28)
-        var cams = get_node("cams")
         #setting yaw
-        cams.set_rotation(Vector3(0, -deg2rad(rx), 0))
+        cams_node.set_rotation(Vector3(0, -deg2rad(rx), 0))
         var ry_rad = deg2rad(ry)
 
         #setting pitch
-        for cam in cams.get_children():
+        for cam in cams_node.get_children():
             cam.set_rotation(Vector3(ry_rad, 0, 0))
 
 
@@ -85,17 +90,27 @@ func _integrate_forces(state):
         on_floor = false
         is_jump = true
 
-    if forward or backward or jump:
+    var velocity = Vector3(0, state.get_linear_velocity()[1], 0)
+    if forward or backward or left or right:
         set_friction(0)
+    else:
+        set_friction(1)
+        if on_floor:
+            velocity[1] = 0
+        animate("default")
 
+    if forward or backward or jump:
         # Get node "body" as a fixed reference attached to the character.
         # The componentes are: [0]: x -> left right
         #                      [1]: y -> up down
         #                      [2]: z -> forward backward
-        var direction = get_node("body").get_global_transform()[2]
-
-        var velocity = Vector3()
-        var previous_velocity = state.get_linear_velocity()
+        var direction
+        if camera_relative:
+            direction = cams_node
+            get_node("body/skeleton").set_rotation(cams_node.get_rotation())
+        else:
+            direction = get_node("body")
+        direction = direction.get_global_transform()[2]
 
         if forward:
             velocity += direction * cur_speed
@@ -113,21 +128,19 @@ func _integrate_forces(state):
             animate("shield")
             velocity -= gravity * delta * jump_speed
 
-        # Prevent character from stop falling or jumping.
-        velocity.y += state.get_linear_velocity()[1]
+    if camera_relative:
+        var r = cams_node.get_global_transform()[0]
+        if left:
+            velocity += r * cur_speed
+        elif right:
+            velocity -= r * cur_speed
+    else: # If left or right are pressed, turn. Else stop turning.
+        if left:
+            state.set_angular_velocity(Vector3(0, turn_speed, 0))
+        elif right:
+            state.set_angular_velocity(Vector3(0, -turn_speed, 0))
+        else: 
+            state.set_angular_velocity(Vector3(0, 0, 0))
 
-        # Finally set the new linear velocity to the character.
-        state.set_linear_velocity(velocity)
-    else:
-        set_friction(1)
-        if on_floor:
-            state.set_linear_velocity(Vector3(0, 0, 0))
-        animate("default")
-
-    # If left or right are pressed, turn. Else stop turning.
-    if left:
-        state.set_angular_velocity(Vector3(0, turn_speed, 0))
-    elif right:
-        state.set_angular_velocity(Vector3(0, -turn_speed, 0))
-    else: 
-        state.set_angular_velocity(Vector3(0, 0, 0))
+    # Finally set the new linear velocity to the character.
+    state.set_linear_velocity(velocity)
