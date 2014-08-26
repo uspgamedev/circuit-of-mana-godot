@@ -56,7 +56,7 @@ func _input(ie):
 func shoot_fireball():
     var fb = fireball.instance()
     var spawn = get_node("body/skeleton/fireball_spawn")
-    fb.set_translation(spawn.get_translation() + get_translation())
+    fb.set_translation(spawn.get_global_transform().origin)
     fb.set_linear_velocity(spawn.get_global_transform()[2] * fireball_speed)
     get_parent().add_child(fb)
 
@@ -75,6 +75,8 @@ func animate(name, speed=1):
                 shoot_fireball()
             return
         else:
+            if not shot:
+                shoot_fireball()
             shot = false
     if name == "":
         if player.is_playing():
