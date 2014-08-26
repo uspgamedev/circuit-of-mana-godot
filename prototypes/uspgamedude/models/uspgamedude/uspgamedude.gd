@@ -41,7 +41,7 @@ func _input(ie):
             camera_relative = not camera_relative
     elif ie.type == InputEvent.MOUSE_MOTION:
         rx = fmod(rx + ie.relative_x * view_sensitivity, 360)
-        ry = max(min(fmod(ry + ie.relative_y * view_sensitivity, 360), 17), -28)
+        ry = max(min(fmod(ry + ie.relative_y * view_sensitivity, 360), 20), -33)
         #setting yaw
         cams_node.set_rotation(Vector3(0, -deg2rad(rx), 0))
         var ry_rad = deg2rad(ry)
@@ -56,8 +56,12 @@ func _input(ie):
 func shoot_fireball():
     var fb = fireball.instance()
     var spawn = get_node("body/skeleton/fireball_spawn")
+    var dir_node = self
+    if camera_relative:
+        get_node("body/skeleton").set_rotation(cams_node.get_rotation())
+        dir_node = cams_node
     fb.set_translation(spawn.get_global_transform().origin)
-    fb.set_linear_velocity(spawn.get_global_transform()[2] * fireball_speed)
+    fb.set_linear_velocity(dir_node.get_global_transform()[2] * fireball_speed)
     get_parent().add_child(fb)
 
 var cur_speed
