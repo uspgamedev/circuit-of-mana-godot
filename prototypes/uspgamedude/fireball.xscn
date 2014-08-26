@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="2" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
+	<resource type="BoxShape" path="local://1">
+		<vector3 name="extents"> 1, 1, 1 </vector3>
+
+	</resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "names" </string>
+			<string_array  len="40">
+				<string> "fireball" </string>
+				<string> "RigidBody" </string>
+				<string> "_import_path" </string>
+				<string> "_import_transform" </string>
+				<string> "shape_count" </string>
+				<string> "shapes/0/shape" </string>
+				<string> "shapes/0/transform" </string>
+				<string> "shapes/0/trigger" </string>
+				<string> "mode" </string>
+				<string> "mass" </string>
+				<string> "friction" </string>
+				<string> "bounce" </string>
+				<string> "custom_integrator" </string>
+				<string> "continuous_cd" </string>
+				<string> "contacts_reported" </string>
+				<string> "contact_monitor" </string>
+				<string> "active" </string>
+				<string> "can_sleep" </string>
+				<string> "axis_lock" </string>
+				<string> "velocity/linear" </string>
+				<string> "velocity/angular" </string>
+				<string> "__meta__" </string>
+				<string> "TestCube" </string>
+				<string> "transform/local" </string>
+				<string> "layers" </string>
+				<string> "geometry/visible" </string>
+				<string> "geometry/material_override" </string>
+				<string> "geometry/cast_shadow" </string>
+				<string> "geometry/receive_shadows" </string>
+				<string> "geometry/range_begin" </string>
+				<string> "geometry/range_end" </string>
+				<string> "geometry/billboard" </string>
+				<string> "geometry/billboard_y" </string>
+				<string> "geometry/depth_scale" </string>
+				<string> "geometry/visible_in_all_rooms" </string>
+				<string> "geometry/use_baked_light" </string>
+				<string> "geometry/baked_light_tex_id" </string>
+				<string> "CollisionShape" </string>
+				<string> "shape" </string>
+				<string> "trigger" </string>
+			</string_array>
+			<string> "version" </string>
+			<int> 1 </int>
+			<string> "conn_count" </string>
+			<int> 0 </int>
+			<string> "node_count" </string>
+			<int> 3 </int>
+			<string> "variants" </string>
+			<array  len="14" shared="false">
+				<node_path> "" </node_path>
+				<transform> 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 </transform>
+				<int> 1 </int>
+				<resource  resource_type="Shape" path="local://1">  </resource>
+				<transform> 0.2, -0, 0, 0, 0.2, -0, 0, 0, 0.2, 0, 0, 0 </transform>
+				<bool> False </bool>
+				<int> 0 </int>
+				<real> 10 </real>
+				<real> 1 </real>
+				<real> 0 </real>
+				<bool> True </bool>
+				<vector3> 0, 0, 0 </vector3>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_states__" </string>
+					<dictionary  shared="false">
+						<string> "2D" </string>
+						<dictionary  shared="false">
+							<string> "pixel_snap" </string>
+							<bool> False </bool>
+							<string> "zoom" </string>
+							<real> 1 </real>
+							<string> "use_snap" </string>
+							<bool> False </bool>
+							<string> "ofs" </string>
+							<vector2> 1, 1 </vector2>
+							<string> "snap" </string>
+							<int> 10 </int>
+						</dictionary>
+						<string> "3D" </string>
+						<dictionary  shared="false">
+							<string> "zfar" </string>
+							<real> 500 </real>
+							<string> "fov" </string>
+							<real> 45 </real>
+							<string> "viewports" </string>
+							<array  len="4" shared="false">
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 0.027312 </real>
+									<string> "x_rot" </string>
+									<real> 0.445797 </real>
+									<string> "y_rot" </string>
+									<real> -23.699627 </real>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> -4.74165, 2.74226, 1.90788 </vector3>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 5.441956 </real>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+								</dictionary>
+							</array>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
+							<string> "default_light" </string>
+							<bool> True </bool>
+							<string> "show_grid" </string>
+							<bool> True </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
+							<string> "znear" </string>
+							<real> 0.1 </real>
+						</dictionary>
+					</dictionary>
+					<string> "__editor_run_settings__" </string>
+					<dictionary  shared="false">
+						<string> "custom_args" </string>
+						<string> "-l $scene" </string>
+						<string> "run_mode" </string>
+						<int> 0 </int>
+					</dictionary>
+					<string> "__editor_plugin_screen__" </string>
+					<string> "3D" </string>
+				</dictionary>
+				<resource name=""></resource>			</array>
+			<string> "nodes" </string>
+			<int_array  len="103"> 				-1, -1, 1, 0, -1, 20, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 12, 5, 13, 5, 14, 6, 15, 5, 16, 10, 17, 10, 18, 6, 19, 11, 20, 11, 21, 12, 0, 0, 0, 22, 22, -1, 16, 2, 0, 3, 1, 23, 4, 24, 2, 25, 10, 26, 13, 27, 10, 28, 10, 29, 9, 30, 9, 31, 5, 32, 5, 33, 5, 34, 5, 35, 5, 36, 6, 0, 0, 0, 37, 37, -1, 5, 2, 0, 3, 1, 23, 4, 38, 3, 39, 5, 0 </int_array>
+			<string> "conns" </string>
+			<int_array  len="0"> 				 </int_array>
+		</dictionary>
+
+	</main_resource>
+</resource_file>
