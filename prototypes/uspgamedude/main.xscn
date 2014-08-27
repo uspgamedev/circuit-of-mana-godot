@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="3" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
+<resource_file type="PackedScene" subresource_count="4" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
 	<ext_resource path="res://models/terrains/terrains.res" type="MeshLibrary"></ext_resource>
 	<ext_resource path="res://models/uspgamedude/uspgamedude.xscn" type="PackedScene"></ext_resource>
+	<resource type="BoxShape" path="local://1">
+		<vector3 name="extents"> 1, 1, 1 </vector3>
+
+	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="56">
+			<string_array  len="95">
 				<string> "game" </string>
 				<string> "Spatial" </string>
 				<string> "_import_path" </string>
 				<string> "_import_transform" </string>
+				<string> "transform/local" </string>
 				<string> "__meta__" </string>
 				<string> "sun" </string>
 				<string> "DirectionalLight" </string>
-				<string> "transform/local" </string>
 				<string> "layers" </string>
 				<string> "params/enabled" </string>
 				<string> "params/bake_mode" </string>
@@ -46,6 +50,8 @@
 				<string> "uspgamedude" </string>
 				<string> "RigidBody" </string>
 				<string> "friction" </string>
+				<string> "walk_speed" </string>
+				<string> "camera_relative" </string>
 				<string> "cams" </string>
 				<string> "base_shoulder" </string>
 				<string> "shoulder_camera" </string>
@@ -62,17 +68,55 @@
 				<string> "head_camera" </string>
 				<string> "base_rear" </string>
 				<string> "rear_camera" </string>
+				<string> "shape_count" </string>
+				<string> "shapes/0/shape" </string>
+				<string> "shapes/0/transform" </string>
+				<string> "shapes/0/trigger" </string>
+				<string> "mode" </string>
+				<string> "mass" </string>
+				<string> "bounce" </string>
+				<string> "custom_integrator" </string>
+				<string> "continuous_cd" </string>
+				<string> "contacts_reported" </string>
+				<string> "contact_monitor" </string>
+				<string> "active" </string>
+				<string> "can_sleep" </string>
+				<string> "axis_lock" </string>
+				<string> "velocity/linear" </string>
+				<string> "velocity/angular" </string>
+				<string> "TestCube" </string>
+				<string> "geometry/visible" </string>
+				<string> "geometry/material_override" </string>
+				<string> "geometry/cast_shadow" </string>
+				<string> "geometry/receive_shadows" </string>
+				<string> "geometry/range_begin" </string>
+				<string> "geometry/range_end" </string>
+				<string> "geometry/billboard" </string>
+				<string> "geometry/billboard_y" </string>
+				<string> "geometry/depth_scale" </string>
+				<string> "geometry/visible_in_all_rooms" </string>
+				<string> "geometry/use_baked_light" </string>
+				<string> "geometry/baked_light_tex_id" </string>
+				<string> "CollisionShape" </string>
+				<string> "shape" </string>
+				<string> "trigger" </string>
+				<string> "RigidBody 2" </string>
+				<string> "RigidBody 3" </string>
+				<string> "RigidBody 4" </string>
+				<string> "RigidBody 5" </string>
+				<string> "sun 2" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 11 </int>
+			<int> 27 </int>
 			<string> "variants" </string>
-			<array  len="35" shared="false">
+			<array  len="51" shared="false">
 				<node_path> "" </node_path>
 				<transform> 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 </transform>
+				<transform> 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0396721, 0.0117512, -0.0170137 </transform>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
@@ -90,11 +134,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 1 </real>
+							<real> 1.108033 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> 1, 1 </vector2>
+							<vector2> -595.808, -412.329 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -108,17 +152,17 @@
 							<array  len="4" shared="false">
 								<dictionary  shared="false">
 									<string> "distance" </string>
-									<real> 7.785438 </real>
+									<real> 64.296959 </real>
 									<string> "x_rot" </string>
-									<real> 0.195798 </real>
+									<real> 0.495798 </real>
 									<string> "y_rot" </string>
-									<real> -22.21216 </real>
+									<real> -26.787222 </real>
 									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
-									<vector3> 5.55946, 5.21228, 8.91367 </vector3>
+									<vector3> 10.7629, 0.719238, 45.8992 </vector3>
 								</dictionary>
 								<dictionary  shared="false">
 									<string> "distance" </string>
@@ -185,7 +229,7 @@
 					<string> "__editor_plugin_screen__" </string>
 					<string> "3D" </string>
 				</dictionary>
-				<transform> 0.958357, -0.0723869, -0.276247, 0.285574, 0.242923, 0.927058, 0, -0.967341, 0.253479, 0, 29.6165, 0 </transform>
+				<transform> 0.958357, -0.0723869, -0.276247, 0.16005, -0.664994, 0.729499, -0.236509, -0.743333, -0.625716, -1.40533, 28.6535, -10.5134 </transform>
 				<int> 1 </int>
 				<bool> True </bool>
 				<int> 0 </int>
@@ -212,7 +256,8 @@
 					<vector3> 0, 0, 0 </vector3>
 				</dictionary>
 				<resource  resource_type="PackedScene" path="res://models/uspgamedude/uspgamedude.xscn">  </resource>
-				<transform> 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.92499, 2.60826, 6.10743 </transform>
+				<transform> -8.14603e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -8.14603e-08, 27.8846, 8.11065, 13.0546 </transform>
+				<int> 8 </int>
 				<transform> 1, -0, 0, 0, 1, -0, 0, 0, 1, 0, 2.25132, 0 </transform>
 				<transform> -1, -3.25842e-07, -1.74533e-08, -3.17551e-07, 0.959462, 0.281839, -7.50891e-08, 0.281839, -0.959462, 0, 3.5, -5.5 </transform>
 				<real> 45 </real>
@@ -223,10 +268,33 @@
 				<transform> -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 </transform>
 				<real> 0.67 </real>
 				<transform> 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2069, 0 </transform>
-				<transform> 0.976553, -0.0339355, 0.212585, -3.32117e-10, 0.987497, 0.157637, -0.215276, -0.153941, 0.964343, 2.39592, 3.83681, 10.7247 </transform>
+				<transform> 0.976553, -0.0339355, 0.212585, -3.32117e-10, 0.987497, 0.157637, -0.215276, -0.153941, 0.964343, 2.39592, 1.41809, 10.7247 </transform>
+				<transform> 0.5, 0, 0.866026, -0, 1, 0, -0.866026, -0, 0.5, -1.53969, 1.25543, 24.5696 </transform>
+				<resource  resource_type="Shape" path="local://1">  </resource>
+				<real> 30 </real>
+				<vector3> 0, 0, 0 </vector3>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<bool> True </bool>
+				<transform> 0.992546, 0, 0.121869, 0.0211624, 0.984808, -0.172354, -0.120018, 0.173648, 0.977467, -1.48075, 3.88495, 25.1996 </transform>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<transform> 0.383022, 0, -0.321394, 0, 0.5, 0, 0.321394, 0, 0.383022, 4.11865, 1.15624, 16.7537 </transform>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<transform> 0.173205, 0, 0.1, 0, 0.2, 0, -0.1, 0, 0.173205, 4.18549, 2.44848, 16.7228 </transform>
+				<transform> -8.14603e-08, 0, -0.5, 0, 0.5, -0, 0.5, 0, -8.14603e-08, 4.12625, 3.89043, 16.7431 </transform>
+				<transform> -0.817188, 0.20479, 0.538762, 0.216968, -0.75669, 0.616721, 0.533975, 0.620871, 0.573925, 28.0262, 25.0573, 52.7798 </transform>
+				<real> 0.8 </real>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="243"> 				-1, -1, 1, 0, -1, 3, 2, 0, 3, 1, 4, 2, 0, 0, 0, 6, 5, -1, 21, 2, 0, 3, 1, 7, 3, 8, 4, 9, 5, 10, 6, 11, 7, 12, 8, 13, 8, 14, 5, 15, 9, 16, 10, 17, 9, 18, 11, 19, 12, 20, 13, 21, 6, 22, 14, 23, 9, 24, 15, 25, 16, 0, 0, 0, 26, 26, -1, 13, 2, 0, 3, 1, 27, 17, 28, 18, 29, 18, 30, 16, 31, 19, 32, 5, 33, 5, 34, 5, 35, 12, 36, 20, 4, 21, 0, 0, 0, 38, 37, 22, 2, 7, 23, 39, 9, 0, 3, 0, 1, 40, -1, 2, 2, 0, 3, 1, 0, 4, 0, 1, 41, -1, 3, 2, 0, 3, 1, 7, 24, 0, 5, 0, 43, 42, -1, 11, 2, 0, 3, 1, 7, 25, 44, 6, 45, 26, 46, 27, 47, 28, 48, 18, 49, 18, 50, 29, 51, 13, 0, 4, 0, 1, 52, -1, 3, 2, 0, 3, 1, 7, 30, 0, 7, 0, 43, 53, -1, 11, 2, 0, 3, 1, 7, 31, 44, 6, 45, 26, 46, 32, 47, 28, 48, 18, 49, 18, 50, 29, 51, 13, 0, 4, 0, 1, 54, -1, 3, 2, 0, 3, 1, 7, 33, 0, 9, 0, 43, 55, -1, 11, 2, 0, 3, 1, 7, 34, 44, 6, 45, 26, 46, 32, 47, 28, 48, 18, 49, 18, 50, 29, 51, 13, 0 </int_array>
+			<int_array  len="799"> 				-1, -1, 1, 0, -1, 4, 2, 0, 3, 1, 4, 2, 5, 3, 0, 0, 0, 7, 6, -1, 21, 2, 0, 3, 1, 4, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 9, 14, 6, 15, 10, 16, 11, 17, 10, 18, 12, 19, 13, 20, 14, 21, 7, 22, 15, 23, 10, 24, 16, 25, 17, 0, 0, 0, 26, 26, -1, 13, 2, 0, 3, 1, 27, 18, 28, 19, 29, 19, 30, 17, 31, 20, 32, 6, 33, 6, 34, 6, 35, 13, 36, 21, 5, 22, 0, 0, 0, 38, 37, 23, 4, 4, 24, 39, 10, 40, 25, 41, 6, 0, 3, 0, 1, 42, -1, 2, 2, 0, 3, 1, 0, 4, 0, 1, 43, -1, 3, 2, 0, 3, 1, 4, 26, 0, 5, 0, 45, 44, -1, 11, 2, 0, 3, 1, 4, 27, 46, 7, 47, 28, 48, 29, 49, 30, 50, 19, 51, 19, 52, 31, 53, 14, 0, 4, 0, 1, 54, -1, 3, 2, 0, 3, 1, 4, 32, 0, 7, 0, 45, 55, -1, 11, 2, 0, 3, 1, 4, 33, 46, 7, 47, 28, 48, 34, 49, 30, 50, 19, 51, 19, 52, 31, 53, 14, 0, 4, 0, 1, 56, -1, 3, 2, 0, 3, 1, 4, 35, 0, 9, 0, 45, 57, -1, 11, 2, 0, 3, 1, 4, 36, 46, 7, 47, 28, 48, 34, 49, 30, 50, 19, 51, 19, 52, 31, 53, 14, 0, 0, 0, 38, 38, -1, 21, 2, 0, 3, 1, 4, 37, 58, 5, 59, 38, 60, 1, 61, 19, 62, 7, 63, 39, 39, 13, 64, 10, 65, 19, 66, 19, 67, 7, 68, 19, 69, 6, 70, 6, 71, 7, 72, 40, 73, 40, 5, 41, 0, 11, 0, 74, 74, -1, 15, 2, 0, 3, 1, 8, 5, 75, 6, 76, 14, 77, 6, 78, 6, 79, 10, 80, 10, 81, 19, 82, 19, 83, 19, 84, 19, 85, 42, 86, 7, 0, 11, 0, 87, 87, -1, 4, 2, 0, 3, 1, 88, 38, 89, 19, 0, 0, 0, 38, 90, -1, 21, 2, 0, 3, 1, 4, 43, 58, 5, 59, 38, 60, 1, 61, 19, 62, 7, 63, 30, 39, 13, 64, 10, 65, 19, 66, 19, 67, 7, 68, 19, 69, 6, 70, 6, 71, 7, 72, 40, 73, 40, 5, 44, 0, 14, 0, 74, 74, -1, 15, 2, 0, 3, 1, 8, 5, 75, 6, 76, 14, 77, 6, 78, 6, 79, 10, 80, 10, 81, 19, 82, 19, 83, 19, 84, 19, 85, 42, 86, 7, 0, 14, 0, 87, 87, -1, 4, 2, 0, 3, 1, 88, 38, 89, 19, 0, 0, 0, 38, 91, -1, 21, 2, 0, 3, 1, 4, 45, 58, 5, 59, 38, 60, 1, 61, 19, 62, 7, 63, 39, 39, 13, 64, 10, 65, 19, 66, 19, 67, 7, 68, 19, 69, 6, 70, 6, 71, 7, 72, 40, 73, 40, 5, 46, 0, 17, 0, 74, 74, -1, 15, 2, 0, 3, 1, 8, 5, 75, 6, 76, 14, 77, 6, 78, 6, 79, 10, 80, 10, 81, 19, 82, 19, 83, 19, 84, 19, 85, 42, 86, 7, 0, 17, 0, 87, 87, -1, 4, 2, 0, 3, 1, 88, 38, 89, 19, 0, 0, 0, 38, 92, -1, 20, 2, 0, 3, 1, 4, 47, 58, 5, 59, 38, 60, 1, 61, 19, 62, 7, 63, 39, 39, 13, 64, 10, 65, 19, 66, 19, 67, 7, 68, 19, 69, 6, 70, 6, 71, 7, 72, 40, 73, 40, 0, 20, 0, 74, 74, -1, 15, 2, 0, 3, 1, 8, 5, 75, 6, 76, 14, 77, 6, 78, 6, 79, 10, 80, 10, 81, 19, 82, 19, 83, 19, 84, 19, 85, 42, 86, 7, 0, 20, 0, 87, 87, -1, 4, 2, 0, 3, 1, 88, 38, 89, 19, 0, 0, 0, 38, 93, -1, 20, 2, 0, 3, 1, 4, 48, 58, 5, 59, 38, 60, 1, 61, 19, 62, 7, 63, 39, 39, 13, 64, 10, 65, 19, 66, 19, 67, 7, 68, 19, 69, 6, 70, 6, 71, 7, 72, 40, 73, 40, 0, 23, 0, 74, 74, -1, 15, 2, 0, 3, 1, 8, 5, 75, 6, 76, 14, 77, 6, 78, 6, 79, 10, 80, 10, 81, 19, 82, 19, 83, 19, 84, 19, 85, 42, 86, 7, 0, 23, 0, 87, 87, -1, 4, 2, 0, 3, 1, 88, 38, 89, 19, 0, 0, 0, 7, 94, -1, 21, 2, 0, 3, 1, 4, 49, 8, 5, 9, 6, 10, 7, 11, 50, 12, 9, 13, 9, 14, 6, 15, 10, 16, 11, 17, 10, 18, 12, 19, 13, 20, 14, 21, 7, 22, 15, 23, 10, 24, 16, 25, 17, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
