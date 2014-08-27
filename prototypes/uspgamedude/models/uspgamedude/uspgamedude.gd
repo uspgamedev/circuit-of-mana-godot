@@ -8,11 +8,13 @@ export var jump_speed = 2
 export var jump_max = 0.35
 export var view_sensitivity = 0.3
 export var camera_relative = false
+export var fireball_speed = 30
 
 var camera_style = 0
 var CAMERA_COUNT = 3
 var cameras
 var cams_node
+var fireball = preload("res://fireball.xscn")
 
 func _ready():
     cameras = [get_node("cams/base_shoulder/shoulder_camera"), 
@@ -39,7 +41,7 @@ func _input(ie):
             camera_relative = not camera_relative
     elif ie.type == InputEvent.MOUSE_MOTION:
         rx = fmod(rx + ie.relative_x * view_sensitivity, 360)
-        ry = max(min(fmod(ry + ie.relative_y * view_sensitivity, 360), 17), -28)
+        ry = max(min(fmod(ry + ie.relative_y * view_sensitivity, 360), 20), -33)
         #setting yaw
         cams_node.set_rotation(Vector3(0, -deg2rad(rx), 0))
         var ry_rad = deg2rad(ry)
@@ -47,20 +49,45 @@ func _input(ie):
         #setting pitch
         for cam in cams_node.get_children():
             cam.set_rotation(Vector3(ry_rad, 0, 0))
+    elif ie.is_action("fireball"):
+        animate("punch", 4)
 
+
+func shoot_fireball():
+    var fb = fireball.instance()
+    var spawn = get_node("body/skeleton/fireball_spawn")
+    var dir_node = self
+    if camera_relative:
+        get_node("body/skeleton").set_rotation(cams_node.get_rotation())
+        dir_node = cams_node
+    fb.set_translation(spawn.get_global_transform().origin)
+    fb.set_linear_velocity(dir_node.get_global_transform()[2] * fireball_speed)
+    get_parent().add_child(fb)
 
 var cur_speed
 var jumping = 0
 var is_jump = false
 
-func animate(name):
+var shot = false
+func animate(name, speed=1):
     var player = get_node("animation_player")
 
+    if player.get_current_animation() == "punch":
+        if player.is_playing():
+            if not shot and player.get_current_animation_pos()/player.get_current_animation_length() > .5:
+                shot = true
+                shoot_fireball()
+            return
+        else:
+            if not shot:
+                shoot_fireball()
+            shot = false
     if name == "":
         if player.is_playing():
             player.stop()
     elif player.get_current_animation() != name or not player.is_playing():
         player.play(name)
+        player.set_speed(speed)
 
 func _integrate_forces(state):
     var gravity = state.get_total_gravity()
